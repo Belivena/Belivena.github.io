@@ -17,7 +17,7 @@
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
   
   
-    <link rel="icon" href="//favicon.jpg">
+    <link rel="icon" href="//touxiang.jpg">
   
   <script src="/style.js"></script>
   
@@ -49,7 +49,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/iTesting/测试理论/">iTesting</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,7 +113,7 @@
 				
 					<li><a href="/">主页</a></li>
 		        
-					<li><a href="/tags/随笔/">随笔</a></li>
+					<li><a href="/iTesting/测试理论/">iTesting</a></li>
 		        
 				</ul>
 			</nav>
@@ -135,7 +135,7 @@
       <div class="body-wrap">
         
   
-    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-test1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -145,7 +145,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/02/12/hello/">pjax: 当ajax遇上pushState</a>
+      <a class="article-title" href="/2017/07/12/test1/">测试基础</a>
     </h1>
   
 
@@ -153,37 +153,119 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ var pjax = pushState + ajax;</div></pre></td></tr></table></figure>
-<p>小时候，小浣熊方便面里面有各种水浒人物的卡片。我买了一包，吃了方便面，饱了。而我又买了第二包，不是想吃方便面，而是仅仅想得到里面的卡片…</p>
-<h2 id="一、简介-pushState是html5中提供的方法，用以"><a href="#一、简介-pushState是html5中提供的方法，用以" class="headerlink" title="一、简介 pushState是html5中提供的方法，用以"></a>一、简介 pushState是html5中提供的方法，用以</h2><p>无刷新的更新浏览器地址栏；<br>如其名称，将新地址push到历史堆栈中<br>用法：pushState(data, title ,url)</p>
-<p>data为保存的对象，可以在window.onpopstate时获取到；title为页面标题；url为需地址栏和历史发生改变的url。<br>正是这点看似很平常的功能，跟ajax结合到一起产生了火花。因为，ajax最擅长的事情就是局部刷新页面。</p>
-<h2 id="二、ajax的纠结历史-一切可以从ajax最擅长的事情说起。"><a href="#二、ajax的纠结历史-一切可以从ajax最擅长的事情说起。" class="headerlink" title="二、ajax的纠结历史 一切可以从ajax最擅长的事情说起。"></a>二、ajax的纠结历史 一切可以从ajax最擅长的事情说起。</h2><p>ajax作为一个异步请求模型，从最初设计开始，也许压根就没打算将它跟浏览器历史挂钩。原因是历史堆栈所记录的，某种意思上可以说是顺序，跟我们理解的“同步”更为密切。</p>
-<p>因而，ajax可以无刷新改变页面内容，却无法改变页面的url。</p>
-<h4 id="历史问题1-如何操控历史"><a href="#历史问题1-如何操控历史" class="headerlink" title="历史问题1 - 如何操控历史"></a>历史问题1 - 如何操控历史</h4><p>当单页面越来越流行，操作记录却很容易被忽略。假设有这样的单页面，按照分类点击，界面逐层递进：体育 - 篮球 -nba -马刺队 - 邓肯<br>当我们点了4下到“邓肯”界面时，一个不小心的刷新，出现在你面前的也许是“体育”。原因是操作记录没有被记录。<br>而通常的解决方案是修改hash，每递进一层，去更新url的hash值，这样的方法：</p>
-<p>刷新时预先判断url的hash，从而知道这是哪一层，加载相应数据；<br>支持了历史<br>这样的方式貌似比较完善，其实不然。</p>
-<h4 id="历史问题2-对搜索引擎不友好"><a href="#历史问题2-对搜索引擎不友好" class="headerlink" title="历史问题2 - 对搜索引擎不友好"></a>历史问题2 - 对搜索引擎不友好</h4><p>最大的问题是，hash后生成的内容是不会被搜索引擎引用到。数据不能被爬取，无疑是浪费和损失。因此google放言，咱可以约定个协议：#!xxx这样hash的url，google也去爬取。称之为hash bang（哈希大爆炸？）。这一协议，在g+，twitter，人人，新浪微博上都可以看到。</p>
-<p>事实上，ajax最或缺的两个问题，恰好被pushState的功能补充完善。</p>
-<h2 id="三、pjax带来的价值-除去补齐了ajax的问题，我们发现pjax会给web带来更多的好处。"><a href="#三、pjax带来的价值-除去补齐了ajax的问题，我们发现pjax会给web带来更多的好处。" class="headerlink" title="三、pjax带来的价值 除去补齐了ajax的问题，我们发现pjax会给web带来更多的好处。"></a>三、pjax带来的价值 除去补齐了ajax的问题，我们发现pjax会给web带来更多的好处。</h2><p>回到开始说的“两包方便面”，我的意思是，有时你访问两个url，部分数据是相同的。比如百度贴吧，第一页和第二页的区别只是帖子内容（卡片）的不同，网站外框部分（方便面）都是一样的，这些东西就不需要在页面刷新时重复加载。</p>
-<p>ajax处理这样的局部刷新，已经给我们带来了web2.0的体验，而加上pushstate的ajax则更进一步：</p>
-<p>一个url对应一套数据，有利于SEO；<br>更改数据和url时，只是局部刷新，带来较好的用户体验；<br>兼容性好，对不支持pushstate的浏览器，url也能正常请求页面（虽然有重复加载）；<br>刷新页面时，由于是url唯一，能正常加载到用户希望看到的数据，比处理hash的方式更方便；<br>后退与前进的浏览器操作，依然可以局部刷新（通过onpushstate事件捕获）</p>
-<h2 id="四、注意事项"><a href="#四、注意事项" class="headerlink" title="四、注意事项"></a>四、注意事项</h2><p>然而pjax不等于单纯的分离使用pushstate与ajax，还必须得做一些封装。缘于以下我能想到的注意事项：</p>
-<p>服务器端增加额外处理逻辑<br>服务器端，需要根据请求的参数，作出全页渲染或局部渲染响应<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Accept:text/html, *<span class="comment">/*; q=0.01</span></div><div class="line">Accept-Encoding:gzip,deflate,sdch</div><div class="line">Connection:keep-alive</div><div class="line">Host:qianduannotes.duapp.com</div><div class="line">User-Agent:AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36</div><div class="line">X-Requested-With:XMLHttpRequest</div><div class="line">X-PJAX:true</div></pre></td></tr></table></figure></p>
-<p>比如请求头部可以设定一个X-PAJX:true，用以通知服务器。</p>
-<p>浏览器兼容 假如浏览器不支持pushstate，提供fallback操作，直接打开需更改url的地址：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.support.pjax = window.history &amp;&amp; window.history.pushState</div><div class="line">// Fallback</div><div class="line"><span class="keyword">if</span> ( !$.support.pjax ) &#123;</div><div class="line">  $.pjax = <span class="keyword">function</span>( options ) &#123;</div><div class="line">    window.location = $.isFunction(options.url) ? options.url() : options.url</div><div class="line">  &#125;</div><div class="line">  $.fn.pjax = <span class="function"><span class="title">function</span></span>() &#123; <span class="built_in">return</span> this &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>本地存储机制<br>无疑pjax与localstorage共同使用可以进一步提升体验，但这一步容易忽略的是数据上报。</p>
-<h2 id="五、参考资料-jquery-pjax"><a href="#五、参考资料-jquery-pjax" class="headerlink" title="五、参考资料 jquery-pjax"></a>五、参考资料 jquery-pjax</h2><p>welefen封装的pjax</p>
+        <p><img src="/2017/07/12/test1/test1_1.jpg" alt="测试"></p>
+<h2 id="一、测试定义"><a href="#一、测试定义" class="headerlink" title="一、测试定义"></a>一、测试定义</h2><p>  通过人工或自动的手段，对被测对象进行检测活动，目的在于发现被测对象是否实现用户的需求，或者弄清实际结果与预测结果之间的差异。</p>
+<h2 id="二、-测试目的"><a href="#二、-测试目的" class="headerlink" title="二、 测试目的"></a>二、 测试目的</h2><ul>
+<li>发现被测对象与用户需求间的差异—俗称找bug。</li>
+<li>通过测试活动发现并解决缺陷，增加人们对被测对象的质量信心。</li>
+<li>通过测试活动，获取被测对象的质量信息，为决策提供数据依据。</li>
+<li>通过测试活动，预防缺陷，从而降低项目或产品的风险。</li>
+</ul>
+<h2 id="三、-测试原则"><a href="#三、-测试原则" class="headerlink" title="三、 测试原则"></a>三、 测试原则</h2><ul>
+<li>测试证明软件存在缺陷</li>
+<li>不可能执行穷尽测试</li>
+<li>测试应该尽早启动，尽早介入</li>
+<li>缺陷存在群集现象</li>
+<li>杀虫剂悖论</li>
+<li>不同的测试活动依赖不同的测试背景</li>
+<li>不存在缺陷的谬论</li>
+</ul>
+<h2 id="四、-测试对象"><a href="#四、-测试对象" class="headerlink" title="四、 测试对象"></a>四、 测试对象</h2><ul>
+<li>软件源代码</li>
+<li>与软件源代码匹配的文档</li>
+<li>支撑软件源代码运行的配置数据</li>
+<li>需求阶段：需求文档—测试需求文档是否正确实现了用户的需求</li>
+<li>系统设计阶段：概要设计文档、详细设计文档、是否有设计或逻辑上的错误</li>
+<li>编码阶段：测试源代码—发现编程上的错误</li>
+<li>系统测试阶段：被测对象是否满足用户需求</li>
+</ul>
+<h2 id="五、-测试级别（测试阶段）"><a href="#五、-测试级别（测试阶段）" class="headerlink" title="五、 测试级别（测试阶段）"></a>五、 测试级别（测试阶段）</h2><h3 id="5-1-单元测试"><a href="#5-1-单元测试" class="headerlink" title="5.1 单元测试"></a>5.1 单元测试</h3><p>  针对被测系统最小的组成单元实施的测试活动，一般是类或函数，也可能是最小的功能单元。</p>
+<h3 id="5-2-集成测试"><a href="#5-2-集成测试" class="headerlink" title="5.2 集成测试"></a>5.2 集成测试</h3><p>  针对组件/单元与组件/单元之间的接口实施的测试活动，验证接口设计是否与设计相符。<br>分三种集成：函数间集成、模块间集成、子系统间集成。</p>
+<h3 id="5-3-系统测试-最常见"><a href="#5-3-系统测试-最常见" class="headerlink" title="5.3 系统测试(最常见)"></a>5.3 系统测试(最常见)</h3><p>  通过集成测试的软件，部署在真实的用户环境下执行测试。<br>  接近用户需求。<br>  通过黑盒测试。</p>
+<h3 id="5-4-验收测试"><a href="#5-4-验收测试" class="headerlink" title="5.4 验收测试"></a>5.4 验收测试</h3><p>  以用户为主的测试，验收组应该由项目组成员、用户代表组成。</p>
+<ul>
+<li>α测试—由用户在开发环境下执行的测试活动，开发者在测试人员身边，发现问题及时沟通解决。在受控环境下执行测试。</li>
+<li>β测试—开发者不在测试人员身边，发现问题由专人统一收集，再由研发人员进行修改。在不受控环境下执行测试。</li>
+<li>UAT测试—用户接受度测试：一般商业用户验证系统可用性进行的测试。</li>
+</ul>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2014/02/12/hello/" class="archive-article-date">
-  	<time datetime="2014-02-12T00:55:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2014-02-12</time>
+      <a href="/2017/07/12/test1/" class="archive-article-date">
+  	<time datetime="2017-07-12T02:32:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-12</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iTesting/">iTesting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试理论/">测试理论</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-domo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/11/domo/">用热爱抵御生活的琐碎</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/2017/07/11/domo/bag3.jpg" alt="热爱生活"></p>
+<p>曾看过一部电影，韩国著名导演李沧东的文艺片《诗》。</p>
+<p>主人公美子是一位已经66岁的女人，她没有丈夫，与女儿分开，与读初中的外孙独自生活，靠做钟点工赚点小钱。</p>
+<p>日子虽然清贫，但丝毫没有影响她对生活的热爱，时髦的打扮甚至掩饰了岁月在她身上留下的痕迹。</p>
+<p>美子酷爱诗歌，不仅经常参加诗歌朗诵会，而且开始学习写诗。她总是留意观察生活中的点滴，捕捉随时可能出现的灵感，然后把它们记录在随身携带的小本上，想要写出美丽的诗歌。</p>
+<p>她观察阳光下的树，捡起落在地上的杏子，蹲在地上看路边的小花，捕捉随时可能出现的灵感。生活有痛苦有麻烦，但是她最终用诗歌完成了自我的救赎。</p>
+<p><img src="/2017/07/11/domo/bag2.jpg" alt="诗"></p>
+<p>最后，她终于写出了自己的诗：</p>
+<blockquote>
+<p>“你在那边还好吗？<br>感到孤独吗？ </p>
+<p>日落时天空还会变红吗？<br>鸟儿还在通往树林的路上唱歌吗？ </p>
+<p>你能收到我不敢寄出的信吗？<br>我能表达我不敢承认的忏悔吗？ </p>
+<p>时间会流逝，玫瑰会枯萎吗？”<br>面对这疲累不定的生活，有人喜欢赏花、喜欢练字，有人热爱阅读，热爱运动…找一样能让你完全放松自我和沉浸进去的事物。</p>
+</blockquote>
+<ul>
+<li>在这全情的投入和享受中，感受到快乐和平静，用这快乐抵抗平凡生活的庸常。 *</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/07/11/domo/" class="archive-article-date">
+  	<time datetime="2017-07-11T02:32:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-11</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
 	</div>
 
       
@@ -265,7 +347,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/iTesting/" style="font-size: 10px;">iTesting</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/测试基础/" style="font-size: 10px;">测试基础</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    				<a href="/tags/iTesting/" style="font-size: 20px;">iTesting</a> <a href="/tags/测试理论/" style="font-size: 20px;">测试理论</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
     			</div>
     	</section>
     
