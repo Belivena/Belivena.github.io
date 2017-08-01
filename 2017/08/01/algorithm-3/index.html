@@ -4,21 +4,16 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>选择排序 | 何李杰的博客</title>
+  <title>algorithm-3 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现void sort(int[] arr) &amp;#123;123456789101112131">
-<meta name="keywords" content="algorithm,选择排序">
+  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="选择排序">
-<meta property="og:url" content="//gentlebaymax.com/2017/08/01/algorithm-2/index.html">
+<meta property="og:title" content="algorithm-3">
+<meta property="og:url" content="//gentlebaymax.com/2017/08/01/algorithm-3/index.html">
 <meta property="og:site_name" content="何李杰的博客">
-<meta property="og:description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现void sort(int[] arr) &amp;#123;123456789101112131">
-<meta property="og:image" content="//gentlebaymax.com/2017/08/01/algorithm-2/xuanze.gif">
-<meta property="og:updated_time" content="2017-08-01T07:57:47.791Z">
+<meta property="og:updated_time" content="2017-08-01T07:53:00.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="选择排序">
-<meta name="twitter:description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现void sort(int[] arr) &amp;#123;123456789101112131">
-<meta name="twitter:image" content="//gentlebaymax.com/2017/08/01/algorithm-2/xuanze.gif">
+<meta name="twitter:title" content="algorithm-3">
   
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
   
@@ -139,7 +134,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-algorithm-2" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-algorithm-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -149,7 +144,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      选择排序
+      algorithm-3
     </h1>
   
 
@@ -157,28 +152,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h2><p>1、首先从原数组中选择最小的1个数据，将其置于第一个位置。<br>2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。<br>3、不断重复选择和交换的过程，直至最后排序完成。</p>
-<p>例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）：<br><img src="/2017/08/01/algorithm-2/xuanze.gif" alt="算法"></p>
-<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight plain"><figcaption><span>void sort(int[] arr) &#123;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">    int tmp;</div><div class="line">    // 第n轮排序过程中的较小数的下标</div><div class="line">    int small;</div><div class="line">    if(num.length &lt; 2) return;    </div><div class="line">    for(int i = 0; i &lt; arr.length - 1; i++) &#123;</div><div class="line">        small = i;</div><div class="line">        // 找出最小的数的下标</div><div class="line">        for(int j = i + 1; j &lt; arr.length; j++) &#123;</div><div class="line">            if(arr[j] &lt; arr[small]) &#123;</div><div class="line">                small = j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        // 交换</div><div class="line">        if(small != i) &#123;</div><div class="line">            tmp = arr[i];</div><div class="line">            arr[i] = arr[small];</div><div class="line">            arr[small] = tmp;</div><div class="line">        &#125;</div><div class="line">        System.out.println(i + &quot;:&quot; + Arrays.toString(arr));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="三、法复杂度和稳定性"><a href="#三、法复杂度和稳定性" class="headerlink" title="三、法复杂度和稳定性"></a>三、法复杂度和稳定性</h2><ul>
-<li>平均/最差时间复杂度：O(n^2)</li>
-<li>空间复杂度：O(1)</li>
-<li>稳定性：不稳定</li>
-</ul>
-
+        
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2017/08/01/algorithm-2/" class="archive-article-date">
-  	<time datetime="2017-08-01T07:23:50.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-01</time>
+      <a href="/2017/08/01/algorithm-3/" class="archive-article-date">
+  	<time datetime="2017-08-01T07:53:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-01</time>
 </a>
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/选择排序/">选择排序</a></li></ul>
-	</div>
-
       
 
       <div class="clearfix"></div>
@@ -189,18 +171,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/01/algorithm-3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          algorithm-3
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/01/algorithm-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">插入排序</div>
+    <a href="/2017/08/01/algorithm-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">选择排序</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -246,7 +219,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="algorithm-2" data-title="选择排序" data-url="//gentlebaymax.com/2017/08/01/algorithm-2/"></div>
+	<div class="ds-thread" data-thread-key="algorithm-3" data-title="algorithm-3" data-url="//gentlebaymax.com/2017/08/01/algorithm-3/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
