@@ -6,18 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>选择排序 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现public void sort(int[] arr) {    int tmp;">
+  <meta name="description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现12345678910111213141516171819202122public voi">
 <meta name="keywords" content="algorithm,选择排序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="选择排序">
 <meta property="og:url" content="//gentlebaymax.com/2017/08/01/algorithm-2/index.html">
 <meta property="og:site_name" content="何李杰的博客">
-<meta property="og:description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现public void sort(int[] arr) {    int tmp;">
+<meta property="og:description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现12345678910111213141516171819202122public voi">
 <meta property="og:image" content="//gentlebaymax.com/2017/08/01/algorithm-2/xuanze.gif">
-<meta property="og:updated_time" content="2017-08-01T08:25:35.462Z">
+<meta property="og:updated_time" content="2017-08-01T08:31:05.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="选择排序">
-<meta name="twitter:description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现public void sort(int[] arr) {    int tmp;">
+<meta name="twitter:description" content="一、算法思想1、首先从原数组中选择最小的1个数据，将其置于第一个位置。2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。3、不断重复选择和交换的过程，直至最后排序完成。 例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）： 二、代码实现12345678910111213141516171819202122public voi">
 <meta name="twitter:image" content="//gentlebaymax.com/2017/08/01/algorithm-2/xuanze.gif">
   
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
@@ -159,7 +159,7 @@
       
         <h2 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h2><p>1、首先从原数组中选择最小的1个数据，将其置于第一个位置。<br>2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。<br>3、不断重复选择和交换的过程，直至最后排序完成。</p>
 <p>例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）：<br><img src="/2017/08/01/algorithm-2/xuanze.gif" alt="算法"></p>
-<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><p>public void sort(int[] arr) {<br>    int tmp;<br>    // 第n轮排序过程中的较小数的下标<br>    int small;<br>    if(num.length &lt; 2) return;<br>    for(int i = 0; i &lt; arr.length - 1; i++) {<br>        small = i;<br>        // 找出最小的数的下标<br>        for(int j = i + 1; j &lt; arr.length; j++) {<br>            if(arr[j] &lt; arr[small]) {<br>                small = j;<br>            }<br>        }<br>        // 交换<br>        if(small != i) {<br>            tmp = arr[i];<br>            arr[i] = arr[small];<br>            arr[small] = tmp;<br>        }<br>        System.out.println(i + “:” + Arrays.toString(arr));<br>    }<br>}</p>
+<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public void sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    // 第n轮排序过程中的较小数的下标</div><div class="line">    int small;</div><div class="line">    <span class="keyword">if</span>(num.length &lt; 2) <span class="built_in">return</span>;    </div><div class="line">    <span class="keyword">for</span>(int i = 0; i &lt; arr.length - 1; i++) &#123;</div><div class="line">        small = i;</div><div class="line">        // 找出最小的数的下标</div><div class="line">        <span class="keyword">for</span>(int j = i + 1; j &lt; arr.length; j++) &#123;</div><div class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[small]) &#123;</div><div class="line">                small = j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        // 交换</div><div class="line">        <span class="keyword">if</span>(small != i) &#123;</div><div class="line">            tmp = arr[i];</div><div class="line">            arr[i] = arr[small];</div><div class="line">            arr[small] = tmp;</div><div class="line">        &#125;</div><div class="line">        System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="三、法复杂度和稳定性"><a href="#三、法复杂度和稳定性" class="headerlink" title="三、法复杂度和稳定性"></a>三、法复杂度和稳定性</h2><ul>
 <li>平均/最差时间复杂度：O(n^2)</li>
 <li>空间复杂度：O(1)</li>
