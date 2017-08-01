@@ -145,7 +145,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/01/algorithm-3/">algorithm-3</a>
+      <a class="article-title" href="/2017/08/01/algorithm-3/">排序算法——冒泡排序</a>
     </h1>
   
 
@@ -162,6 +162,11 @@
   	<time datetime="2017-08-01T07:53:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-01</time>
 </a>
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/冒泡排序/">冒泡排序</a></li></ul>
+	</div>
+
       
 
       <div class="clearfix"></div>
@@ -189,7 +194,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/01/algorithm-2/">选择排序</a>
+      <a class="article-title" href="/2017/08/01/algorithm-2/">排序算法——选择排序</a>
     </h1>
   
 
@@ -199,7 +204,7 @@
       
         <h2 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h2><p>1、首先从原数组中选择最小的1个数据，将其置于第一个位置。<br>2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。<br>3、不断重复选择和交换的过程，直至最后排序完成。</p>
 <p>例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）：<br><img src="/2017/08/01/algorithm-2/xuanze.gif" alt="算法"></p>
-<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public void sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    // 第n轮排序过程中的较小数的下标</div><div class="line">    int small;</div><div class="line">    <span class="keyword">if</span>(num.length &lt; 2) <span class="built_in">return</span>;    </div><div class="line">    <span class="keyword">for</span>(int i = 0; i &lt; arr.length - 1; i++) &#123;</div><div class="line">        small = i;</div><div class="line">        // 找出最小的数的下标</div><div class="line">        <span class="keyword">for</span>(int j = i + 1; j &lt; arr.length; j++) &#123;</div><div class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[small]) &#123;</div><div class="line">                small = j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        // 交换</div><div class="line">        <span class="keyword">if</span>(small != i) &#123;</div><div class="line">            tmp = arr[i];</div><div class="line">            arr[i] = arr[small];</div><div class="line">            arr[small] = tmp;</div><div class="line">        &#125;</div><div class="line">        System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">void</span> sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    <span class="comment">// 第n轮排序过程中的较小数的下标</span></div><div class="line">    int small;</div><div class="line">    <span class="keyword">if</span>(num.length &lt; <span class="number">2</span>) <span class="keyword">return</span>;    </div><div class="line">    <span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</div><div class="line">        small = i;</div><div class="line">        <span class="comment">// 找出最小的数的下标</span></div><div class="line">        <span class="keyword">for</span>(int j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</div><div class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[small]) &#123;</div><div class="line">                small = j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 交换</span></div><div class="line">        <span class="keyword">if</span>(small != i) &#123;</div><div class="line">            tmp = arr[i];</div><div class="line">            arr[i] = arr[small];</div><div class="line">            arr[small] = tmp;</div><div class="line">        &#125;</div><div class="line">        System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="三、法复杂度和稳定性"><a href="#三、法复杂度和稳定性" class="headerlink" title="三、法复杂度和稳定性"></a>三、法复杂度和稳定性</h2><ul>
 <li>平均/最差时间复杂度：O(n^2)</li>
 <li>空间复杂度：O(1)</li>
@@ -298,7 +303,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/iTesting/" style="font-size: 20px;">iTesting</a> <a href="/tags/排序算法/" style="font-size: 10px;">排序算法</a> <a href="/tags/测试流程/" style="font-size: 10px;">测试流程</a> <a href="/tags/测试理论/" style="font-size: 16.67px;">测试理论</a> <a href="/tags/选择排序/" style="font-size: 10px;">选择排序</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    				<a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/iTesting/" style="font-size: 20px;">iTesting</a> <a href="/tags/冒泡排序/" style="font-size: 10px;">冒泡排序</a> <a href="/tags/排序算法/" style="font-size: 10px;">排序算法</a> <a href="/tags/测试流程/" style="font-size: 10px;">测试流程</a> <a href="/tags/测试理论/" style="font-size: 15px;">测试理论</a> <a href="/tags/选择排序/" style="font-size: 10px;">选择排序</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
     			</div>
     	</section>
     
