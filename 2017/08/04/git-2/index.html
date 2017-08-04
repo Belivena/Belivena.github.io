@@ -4,15 +4,19 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2017/7 | 何李杰的博客</title>
+  <title>Node简介 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="何李杰的博客">
-<meta property="og:url" content="//gentlebaymax.com/archives/2017/07/index.html">
+  <meta name="description" content="一、什么是Node 类似一个操作系统 说到底就是一个JS运行环境 很多的前端开发工具都是基于node这个平台 我们可以在node运行js代码 目前有两个分支 Node.js 0.12.7 官方版本 要求尽善尽美 IO.js 是社区的产物，不是官方的东西，io.js有很多新特性，迭代非常快，社区推进非常快 15年两者合并，发布node第一个正式版 4.0， 迭代速度又慢了 node 5.x == i">
+<meta name="keywords" content="Node,NPM,NVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node简介">
+<meta property="og:url" content="//gentlebaymax.com/2017/08/04/git-2/index.html">
 <meta property="og:site_name" content="何李杰的博客">
+<meta property="og:description" content="一、什么是Node 类似一个操作系统 说到底就是一个JS运行环境 很多的前端开发工具都是基于node这个平台 我们可以在node运行js代码 目前有两个分支 Node.js 0.12.7 官方版本 要求尽善尽美 IO.js 是社区的产物，不是官方的东西，io.js有很多新特性，迭代非常快，社区推进非常快 15年两者合并，发布node第一个正式版 4.0， 迭代速度又慢了 node 5.x == i">
+<meta property="og:updated_time" content="2017-08-04T08:17:32.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="何李杰的博客">
+<meta name="twitter:title" content="Node简介">
+<meta name="twitter:description" content="一、什么是Node 类似一个操作系统 说到底就是一个JS运行环境 很多的前端开发工具都是基于node这个平台 我们可以在node运行js代码 目前有两个分支 Node.js 0.12.7 官方版本 要求尽善尽美 IO.js 是社区的产物，不是官方的东西，io.js有很多新特性，迭代非常快，社区推进非常快 15年两者合并，发布node第一个正式版 4.0， 迭代速度又慢了 node 5.x == i">
   
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
   
@@ -137,182 +141,153 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-git-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
+    <h1 class="article-title" itemprop="name">
+      Node简介
+    </h1>
   
+
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
+        <h3 id="一、什么是Node"><a href="#一、什么是Node" class="headerlink" title="一、什么是Node"></a>一、什么是Node</h3><ul>
+<li>类似一个操作系统</li>
+<li>说到底就是一个JS运行环境</li>
+<li>很多的前端开发工具都是基于node这个平台</li>
+<li>我们可以在node运行js代码</li>
+<li>目前有两个分支<ul>
+<li>Node.js 0.12.7 官方版本 要求尽善尽美</li>
+<li>IO.js 是社区的产物，不是官方的东西，io.js有很多新特性，迭代非常快，社区推进非常快</li>
+<li>15年两者合并，发布node第一个正式版 4.0， 迭代速度又慢了</li>
+<li>node 5.x == io.js</li>
+<li>node 4.0 == node</li>
+</ul>
+</li>
+</ul>
+<h3 id="二、什么是NVM"><a href="#二、什么是NVM" class="headerlink" title="二、什么是NVM"></a>二、什么是NVM</h3><ul>
+<li>Node Version Manager(Node的版本管理工具)</li>
+<li>因为node的版本比较多，很多时候我们可能依赖多个版本，并要求自由切换</li>
+<li><p>常用操作：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nvm <span class="keyword">use</span> [对应的版本号] [平台架构（如果是<span class="number">32</span>系统需要写<span class="number">32</span>,<span class="number">64</span>位不用管）]</div><div class="line">nvm <span class="keyword">install</span> &lt;<span class="keyword">version</span>&gt; [arch]  安装</div><div class="line">nvm <span class="keyword">uninstall</span> &lt;<span class="keyword">version</span>&gt; 卸载</div><div class="line">nvm <span class="keyword">list</span> 查看已经安装版本</div></pre></td></tr></table></figure>
+</li>
+<li><p>官网</p>
+<ul>
+<li><a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="external">https://github.com/coreybutler/nvm-windows</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="二、什么是NPM"><a href="#二、什么是NPM" class="headerlink" title="二、什么是NPM"></a>二、什么是NPM</h3><ul>
+<li>Node Package Manager</li>
+<li>Node应用程序依赖包的管理工具</li>
+<li>安装卸载更新之类的操作</li>
+</ul>
+<ul>
+<li>官网<ul>
+<li><a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a></li>
+</ul>
+</li>
+<li>常用操作：<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 安装一个包，默认安装最新稳定版本</span></div><div class="line">npm install <span class="keyword">package</span><span class="number">_n</span>ame</div><div class="line"><span class="comment">// --save</span></div><div class="line"><span class="comment">// 初始化操作，给项目添加一个配置文件</span></div><div class="line">npm init</div></pre></td></tr></table></figure></li>
+</ul>
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/25/test4/" class="archive-article-date">
-  	<time datetime="2017-07-25T14:23:20.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-25</time>
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/08/04/git-2/" class="archive-article-date">
+  	<time datetime="2017-08-04T08:00:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/25/test4/">软件测试流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iTesting/">iTesting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试流程/">测试流程</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NVM/">NVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/25/test3/" class="archive-article-date">
-  	<time datetime="2017-07-25T12:55:59.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/25/test3/">软件质量</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iTesting/">iTesting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试理论/">测试理论</a></li></ul>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/04/git-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">GIT简介</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+
+
+<div class="share_addthis share_jia">
+  <div class="sharing addthis_toolbox share">
+  	<span class="jiathis_txt">Share to: &nbsp; </span>
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
   </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/25/test2/" class="archive-article-date">
-  	<time datetime="2017-07-25T12:27:52.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/25/test2/">系统测试类型、软件测试方法</a>
-    </h1>
-  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iTesting/">iTesting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试理论/">测试理论</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/12/test1/" class="archive-article-date">
-  	<time datetime="2017-07-12T02:32:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/12/test1/">测试基础</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iTesting/">iTesting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试理论/">测试理论</a></li></ul>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="git-2" data-title="Node简介" data-url="//gentlebaymax.com/2017/08/04/git-2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"litten-hexo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/11/domo/" class="archive-article-date">
-  	<time datetime="2017-07-11T02:32:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/11/domo/">用热爱抵御生活的琐碎</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
       </div>
@@ -335,8 +310,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

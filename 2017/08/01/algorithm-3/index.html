@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="何李杰的博客">
 <meta property="og:description" content="一、算法思想（升序排列）从起始元素开始，对数组中两两相邻的元素进行比较，将值较小的元素放在前面，值较大的元素放在后面，一轮比较完毕，一个最大的数沉底成为数组中的最后一个元素，一些较小的数如同气泡一样上浮一个位置（因此成为冒泡或者起泡排序）。n个数，经过n-1轮比较后完成排序。 具体流程如下：　　1、对要排序的数组中的数据，依次比较相邻的两个数据的大小。　　2、如果前面的数据大于后面的数据，就把这两">
 <meta property="og:image" content="//gentlebaymax.com/2017/08/01/algorithm-3/maopao.gif">
-<meta property="og:updated_time" content="2017-08-01T08:48:52.787Z">
+<meta property="og:updated_time" content="2017-08-04T02:46:40.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法——冒泡排序">
 <meta name="twitter:description" content="一、算法思想（升序排列）从起始元素开始，对数组中两两相邻的元素进行比较，将值较小的元素放在前面，值较大的元素放在后面，一轮比较完毕，一个最大的数沉底成为数组中的最后一个元素，一些较小的数如同气泡一样上浮一个位置（因此成为冒泡或者起泡排序）。n个数，经过n-1轮比较后完成排序。 具体流程如下：　　1、对要排序的数组中的数据，依次比较相邻的两个数据的大小。　　2、如果前面的数据大于后面的数据，就把这两">
@@ -164,7 +164,7 @@
         <h2 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h2><p>（升序排列）从起始元素开始，对数组中两两相邻的元素进行比较，将值较小的元素放在前面，值较大的元素放在后面，一轮比较完毕，一个最大的数沉底成为数组中的最后一个元素，一些较小的数如同气泡一样上浮一个位置（因此成为冒泡或者起泡排序）。n个数，经过n-1轮比较后完成排序。</p>
 <p>具体流程如下：<br>　　1、对要排序的数组中的数据，依次比较相邻的两个数据的大小。<br>　　2、如果前面的数据大于后面的数据，就把这两个数据进行交换。这样一轮比较和交换过后，就把最小的数据放在数组的最前面；<br>　　3、按照上述比较和交换的方法，把剩下的数据再进行相同操作，最后，便可按照从小到大的顺序对数组完成排序。</p>
 <p>例如：对序列6 5 3 1 8 7 2 4进行冒泡排序的过程如下所示（图片来自维基百科）：<br><img src="/2017/08/01/algorithm-3/maopao.gif" alt="算法"></p>
-<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public int[] sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    <span class="keyword">for</span>(int i = 1; i &lt; arr.length; i++) &#123;</div><div class="line">         // 判断相邻两个数据的大小，并把较大的数往后冒泡</div><div class="line">         <span class="keyword">for</span>(int j = 0; j &lt; arr.length - 1; j++) &#123;</div><div class="line">             <span class="keyword">if</span>(arr[j] &gt; arr[j+1]) &#123;</div><div class="line">                 tmp = arr[j];</div><div class="line">                 arr[j] = arr[j+1];</div><div class="line">                 arr[j+1] = tmp;</div><div class="line">             &#125;</div><div class="line">         &#125;</div><div class="line">         System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">     &#125;</div><div class="line">     <span class="built_in">return</span> arr;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public void sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    <span class="keyword">for</span>(int i = 1; i &lt; arr.length; i++) &#123;</div><div class="line">         // 判断相邻两个数据的大小，并把较大的数往后冒泡</div><div class="line">         <span class="keyword">for</span>(int j = 0; j &lt; arr.length - 1; j++) &#123;</div><div class="line">             <span class="keyword">if</span>(arr[j] &gt; arr[j+1]) &#123;</div><div class="line">                 tmp = arr[j];</div><div class="line">                 arr[j] = arr[j+1];</div><div class="line">                 arr[j+1] = tmp;</div><div class="line">             &#125;</div><div class="line">         &#125;</div><div class="line">         System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">     &#125;</div><div class="line">     <span class="built_in">return</span> arr;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <h2 id="三、算法复杂度和稳定性"><a href="#三、算法复杂度和稳定性" class="headerlink" title="三、算法复杂度和稳定性"></a>三、算法复杂度和稳定性</h2><ul>
 <li>平均/最差时间复杂度：O(n^2)</li>
 <li>空间复杂度：O(1)</li>
@@ -193,6 +193,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/08/04/git-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          GIT简介
+        
+      </div>
+    </a>
   
   
     <a href="/2017/08/01/algorithm-2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -318,7 +327,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/iTesting/" style="font-size: 20px;">iTesting</a> <a href="/tags/冒泡排序/" style="font-size: 10px;">冒泡排序</a> <a href="/tags/插入排序/" style="font-size: 10px;">插入排序</a> <a href="/tags/测试流程/" style="font-size: 10px;">测试流程</a> <a href="/tags/测试理论/" style="font-size: 15px;">测试理论</a> <a href="/tags/选择排序/" style="font-size: 10px;">选择排序</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    				<a href="/tags/NPM/" style="font-size: 10px;">NPM</a> <a href="/tags/NVM/" style="font-size: 10px;">NVM</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/algorithm/" style="font-size: 15px;">algorithm</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/iTesting/" style="font-size: 20px;">iTesting</a> <a href="/tags/冒泡排序/" style="font-size: 10px;">冒泡排序</a> <a href="/tags/插入排序/" style="font-size: 10px;">插入排序</a> <a href="/tags/测试流程/" style="font-size: 10px;">测试流程</a> <a href="/tags/测试理论/" style="font-size: 15px;">测试理论</a> <a href="/tags/选择排序/" style="font-size: 10px;">选择排序</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
     			</div>
     	</section>
     
