@@ -4,15 +4,19 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>何李杰的博客</title>
+  <title>MySQL基本操作 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="何李杰的博客">
-<meta property="og:url" content="//gentlebaymax.com/index.html">
+  <meta name="description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql  打开MySQL服务并使用root用户登录： 12345#启动 MySQL 服务sud">
+<meta name="keywords" content="SQL语句,MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL基本操作">
+<meta property="og:url" content="//gentlebaymax.com/2017/08/07/SQL-2/index.html">
 <meta property="og:site_name" content="何李杰的博客">
+<meta property="og:description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql  打开MySQL服务并使用root用户登录： 12345#启动 MySQL 服务sud">
+<meta property="og:updated_time" content="2017-08-07T05:20:34.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="何李杰的博客">
+<meta name="twitter:title" content="MySQL基本操作">
+<meta name="twitter:description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql  打开MySQL服务并使用root用户登录： 12345#启动 MySQL 服务sud">
   
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
   
@@ -137,9 +141,7 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-algorithm-4" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-SQL-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -148,52 +150,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/14/algorithm-4/">algorithm-4</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/08/14/algorithm-4/" class="archive-article-date">
-  	<time datetime="2017-08-14T07:43:18.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-14</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-SQL-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/07/SQL-2/">MySQL基本操作</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL基本操作
     </h1>
   
 
@@ -363,339 +321,85 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-    <article id="post-SQL-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2017/08/14/algorithm-4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/07/SQL-1/">SQL基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、数据库相关"><a href="#一、数据库相关" class="headerlink" title="一、数据库相关"></a>一、数据库相关</h2><h3 id="1-1-数据库和SQL概念"><a href="#1-1-数据库和SQL概念" class="headerlink" title="1.1 数据库和SQL概念"></a>1.1 数据库和SQL概念</h3><p>数据库（Database）<br>  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。<br>结构化查询语言(Structured Query Language)简称 SQL<br>  是上世纪 70 年代由 IBM 公司开发，用于对数据库进行操作的语言。更详细地说，SQL是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名。</p>
-<h3 id="1-2-MySQL介绍"><a href="#1-2-MySQL介绍" class="headerlink" title="1.2 MySQL介绍"></a>1.2 MySQL介绍</h3><p>MySQL是一个 DBMS（数据库管理系统），由瑞典 MySQLAB 公司开发，目前属于 Oracle 公司，MySQL 是最流行的关系型数据库管理系统（关系数据库，是建立在关系数据库模型基础上的数据库，借助于集合代数等概念和方法来处理数据库中的数据）。由于其体积小、速度快、总体拥有成本低，尤其是开放源码这一特点，一般中小型网站的开发者都选择 MySQL 作为网站数据库。MySQL 使用 SQL 语言进行操作。</p>
-<h2 id="二、数据类型"><a href="#二、数据类型" class="headerlink" title="二、数据类型"></a>二、数据类型</h2><table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>大小(字节)</th>
-<th>用途</th>
-<th>格式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>INT</td>
-<td>4</td>
-<td>整数</td>
-<td></td>
-</tr>
-<tr>
-<td>FLOAT</td>
-<td>4</td>
-<td>单精度浮点数</td>
-<td></td>
-</tr>
-<tr>
-<td>DOUBLE</td>
-<td>8</td>
-<td>双精度浮点数</td>
-<td></td>
-</tr>
-<tr>
-<td>ENUM</td>
-<td></td>
-<td>单选,比如性别</td>
-<td>ENUM(‘a’,’b’,’c’)</td>
-</tr>
-<tr>
-<td>SET</td>
-<td></td>
-<td>多选</td>
-<td>SET(‘1’,’2’,’3’)</td>
-</tr>
-<tr>
-<td>DATE</td>
-<td>3</td>
-<td>日期</td>
-<td>YYYY-MM-DD</td>
-</tr>
-<tr>
-<td>TIME</td>
-<td>3</td>
-<td>时间点或持续时间</td>
-<td>HH:MM:SS</td>
-</tr>
-<tr>
-<td>YEAR</td>
-<td>1</td>
-<td>年份值</td>
-<td>YYYY</td>
-</tr>
-<tr>
-<td>CHAR</td>
-<td>0~255</td>
-<td>定长字符串</td>
-<td></td>
-</tr>
-<tr>
-<td>VARCHAR</td>
-<td>0~255</td>
-<td>变长字符串</td>
-<td></td>
-</tr>
-<tr>
-<td>TEXT</td>
-<td>0~65535</td>
-<td>长文本数据</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>CHAR 和 VARCHAR 的区别: CHAR 的长度是固定的，而 VARCHAR 的长度是可以变化的，比如，存储字符串 “abc”，对于 CHAR(10)，表示存储的字符将占 10 个字节(包括 7 个空字符)，而同样的 VARCHAR(12) 则只占用4个字节的长度，增加一个额外字节来存储字符串本身的长度，12 只是最大值，当你存储的字符小于 12 时，按实际长度存储。</p>
-<p>ENUM和SET的区别: ENUM 类型的数据的值，必须是定义时枚举的值的其中之一，即单选，而 SET 类型的值则可以多选。</p>
-<h2 id="三、-约束分类"><a href="#三、-约束分类" class="headerlink" title="三、 约束分类"></a>三、 约束分类</h2><table>
-<thead>
-<tr>
-<th>约束类型：</th>
-<th>主键</th>
-<th>默认值</th>
-<th>唯一</th>
-<th>外键</th>
-<th>非空</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>关键字：</td>
-<td>PRIMARY KEY</td>
-<td>DEFAULT</td>
-<td>UNIQUE</td>
-<td>FOREIGN KEY</td>
-<td>NOT NULL</td>
-</tr>
-</tbody>
-</table>
-<p>如下所示，搭建一个成绩管理系统：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> gradesystem;</div><div class="line"><span class="keyword">use</span> gradesystem</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student</div><div class="line">(</div><div class="line"><span class="keyword">sid</span> <span class="built_in">int</span>(<span class="number">10</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line">sname <span class="built_in">CHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">gender <span class="built_in">CHAR</span>(<span class="number">6</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span></div><div class="line">);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> course</div><div class="line">(</div><div class="line">cid <span class="built_in">int</span>(<span class="number">10</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line">cname <span class="built_in">CHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span></div><div class="line">);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span>  mark</div><div class="line">(</div><div class="line"><span class="keyword">mid</span> <span class="built_in">int</span>(<span class="number">10</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line"><span class="keyword">sid</span> <span class="built_in">int</span>(<span class="number">10</span>),</div><div class="line">cid <span class="built_in">int</span>(<span class="number">10</span>),</div><div class="line">score <span class="built_in">int</span>(<span class="number">3</span>) <span class="keyword">DEFAULT</span> <span class="number">0</span>,</div><div class="line"><span class="keyword">CONSTRAINT</span> FK_mark_sid FOREIGN <span class="keyword">KEY</span> (<span class="keyword">sid</span>) <span class="keyword">REFERENCES</span> student (<span class="keyword">sid</span>),</div><div class="line"><span class="keyword">CONSTRAINT</span> FK_mark_cid FOREIGN <span class="keyword">KEY</span> (cid) <span class="keyword">REFERENCES</span> course (cid)</div><div class="line">);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> student <span class="keyword">VALUES</span></div><div class="line">(<span class="number">1</span>, <span class="string">'Tom'</span>, <span class="string">'male'</span>),</div><div class="line">(<span class="number">2</span>, <span class="string">'Jack'</span>, <span class="string">'male'</span>),</div><div class="line">(<span class="number">3</span>, <span class="string">'Rose'</span>, <span class="string">'female'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> course <span class="keyword">VALUES</span></div><div class="line">(<span class="number">1</span>, <span class="string">'math'</span>),</div><div class="line">(<span class="number">2</span>, <span class="string">'physics'</span>),</div><div class="line">(<span class="number">3</span>, <span class="string">'chemistry'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> mark <span class="keyword">VALUES</span></div><div class="line">(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">80</span>),</div><div class="line">(<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">85</span>),</div><div class="line">(<span class="number">3</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">90</span>),</div><div class="line">(<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">60</span>),</div><div class="line">(<span class="number">5</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">90</span>),</div><div class="line">(<span class="number">6</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">75</span>),</div><div class="line">(<span class="number">7</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">95</span>),</div><div class="line">(<span class="number">8</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">75</span>),</div><div class="line">(<span class="number">9</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">85</span>);</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/08/07/SQL-1/" class="archive-article-date">
-  	<time datetime="2017-08-07T02:53:23.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-07</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-git-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          algorithm-4
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/04/git-2/">Node简介</a>
-    </h1>
   
+    <a href="/2017/08/07/SQL-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SQL基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、什么是Node"><a href="#一、什么是Node" class="headerlink" title="一、什么是Node"></a>一、什么是Node</h3><ul>
-<li>类似一个操作系统</li>
-<li>说到底就是一个JS运行环境</li>
-<li>很多的前端开发工具都是基于node这个平台</li>
-<li>我们可以在node运行js代码</li>
-<li>目前有两个分支<ul>
-<li>Node.js 0.12.7 官方版本 要求尽善尽美</li>
-<li>IO.js 是社区的产物，不是官方的东西，io.js有很多新特性，迭代非常快，社区推进非常快</li>
-<li>15年两者合并，发布node第一个正式版 4.0， 迭代速度又慢了</li>
-<li>node 5.x == io.js</li>
-<li>node 4.0 == node</li>
-</ul>
-</li>
-</ul>
-<h3 id="二、什么是NVM"><a href="#二、什么是NVM" class="headerlink" title="二、什么是NVM"></a>二、什么是NVM</h3><ul>
-<li>Node Version Manager(Node的版本管理工具)</li>
-<li>因为node的版本比较多，很多时候我们可能依赖多个版本，并要求自由切换</li>
-<li><p>常用操作：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nvm <span class="keyword">use</span> [对应的版本号] [平台架构（如果是<span class="number">32</span>系统需要写<span class="number">32</span>,<span class="number">64</span>位不用管）]</div><div class="line">nvm <span class="keyword">install</span> &lt;<span class="keyword">version</span>&gt; [arch]  安装</div><div class="line">nvm <span class="keyword">uninstall</span> &lt;<span class="keyword">version</span>&gt; 卸载</div><div class="line">nvm <span class="keyword">list</span> 查看已经安装版本</div></pre></td></tr></table></figure>
-</li>
-<li><p>官网</p>
-<ul>
-<li><a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="external">https://github.com/coreybutler/nvm-windows</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="二、什么是NPM"><a href="#二、什么是NPM" class="headerlink" title="二、什么是NPM"></a>二、什么是NPM</h3><ul>
-<li>Node Package Manager</li>
-<li>Node应用程序依赖包的管理工具</li>
-<li>安装卸载更新之类的操作</li>
-</ul>
-<ul>
-<li>官网<ul>
-<li><a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a></li>
-</ul>
-</li>
-<li>常用操作：<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 安装一个包，默认安装最新稳定版本</span></div><div class="line">npm install <span class="keyword">package</span><span class="number">_n</span>ame</div><div class="line"><span class="comment">// --save</span></div><div class="line"><span class="comment">// 初始化操作，给项目添加一个配置文件</span></div><div class="line">npm init</div></pre></td></tr></table></figure></li>
-</ul>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/08/04/git-2/" class="archive-article-date">
-  	<time datetime="2017-08-04T08:00:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-04</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NVM/">NVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-      
 
-      <div class="clearfix"></div>
-    </div>
+
+
+<div class="share_addthis share_jia">
+  <div class="sharing addthis_toolbox share">
+  	<span class="jiathis_txt">Share to: &nbsp; </span>
+    <a class="addthis_button_facebook_like"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
   </div>
-</article>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+</div>
 
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="SQL-2" data-title="MySQL基本操作" data-url="//gentlebaymax.com/2017/08/07/SQL-2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"litten-hexo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
-
-
-
-  
-    <article id="post-git-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/04/git-1/">GIT简介</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、什么是GIT"><a href="#一、什么是GIT" class="headerlink" title="一、什么是GIT"></a>一、什么是GIT</h3><ul>
-<li>是一个源代码管理工具</li>
-<li>在一个项目中，凡是由开发人员编写的都算是源代码</li>
-<li>源代码有必要管理起来</li>
-<li>让源代码可以被追溯，主要记录每次变更了什么，谁主导这次变化</li>
-<li>人为的维护比较麻烦</li>
-<li>GIT是Linux之父当年为了维护管理Linux的源代码写的一个工具</li>
-<li>Git 之前 很多使用 svn vss tfs hs ……</li>
-<li><a href="https://guides.github.com/" target="_blank" rel="external">https://guides.github.com/</a></li>
-</ul>
-<h3 id="二、安装GIT"><a href="#二、安装GIT" class="headerlink" title="二、安装GIT"></a>二、安装GIT</h3><ul>
-<li>git命令行工具</li>
-<li>基于git命令行的一个客户端软件（提供一个界面去管理源代码）</li>
-</ul>
-<h3 id="三、GIT命令操作"><a href="#三、GIT命令操作" class="headerlink" title="三、GIT命令操作"></a>三、GIT命令操作</h3><p><img src="/2017/08/04/git-1/git-guide.jpg" alt="GIT"></p>
-<h3 id="四、github"><a href="#四、github" class="headerlink" title="四、github"></a>四、github</h3><ul>
-<li><a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
-<li>GITHUB是一个GIT服务的提供商，</li>
-<li>提出社交化编程</li>
-</ul>
-<h3 id="五、git的使用流程"><a href="#五、git的使用流程" class="headerlink" title="五、git的使用流程"></a>五、git的使用流程</h3><p>1、初始化一个本地GIT仓储<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 定位到仓储文件夹目录</div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /dir</span></div><div class="line">// 初始化本地仓储</div><div class="line"><span class="meta">$</span><span class="bash"> git init</span></div></pre></td></tr></table></figure></p>
-<p>2、添加本地GIT忽略清单文件.gitignore<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">//</span> 添加OS X中系统文件<span class="string">.DS_Store</span>到忽略清单，这将忽略项目任意目录下的<span class="string">.DS_Store</span>文件或是文件夹</div><div class="line">$ <span class="keyword">echo</span> <span class="string">.DS_Store</span> &gt;&gt; <span class="string">.gitignore</span></div></pre></td></tr></table></figure></p>
-<p>3、查看本地仓储的变更状态<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git status</span></div></pre></td></tr></table></figure></p>
-<p>4、添加本地暂存（托管）文件<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 添加指定文件名的文件</div><div class="line">$ git <span class="keyword">add</span><span class="bash"> README.md</span></div><div class="line">// 添加通配符匹配的文件</div><div class="line">$ git <span class="keyword">add</span><span class="bash"> *.md</span></div><div class="line">// 添加所有未托管的文件（忽略.gitignore清单中的列表）</div><div class="line">$ git <span class="keyword">add</span><span class="bash"> --all</span></div></pre></td></tr></table></figure></p>
-<p>5、提交被托管的文件变化到本地仓储<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git commit -m <span class="string">'Initial commit(change log)'</span></span></div></pre></td></tr></table></figure></p>
-<p>6、为仓储添加远端（服务器端）地址<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 添加一个远端地址并起了一个别名叫origin</span></div><div class="line"><span class="symbol">$</span> git remote add origin https:<span class="comment">//github.com/Micua/Git.git</span></div><div class="line"><span class="comment">// 查看现有的远端列表</span></div><div class="line"><span class="symbol">$</span> git remote -v</div></pre></td></tr></table></figure></p>
-<p>7、将本地仓储的提交记录推送到远端的master分支<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">push</span> -u <span class="built_in">origin</span> master</div></pre></td></tr></table></figure></p>
-<p>8、拉取远端master分支的更新记录到本地<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git pull origin master</span></div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2017/08/04/git-1/" class="archive-article-date">
-  	<time datetime="2017-08-04T07:20:48.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-08-04</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
       </div>
@@ -717,8 +421,8 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
