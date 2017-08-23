@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="//gentlebaymax.com">
   <title>排序算法——插入排序 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、算法思想1、首先比较数组的前两个数据，并排序；2、比较第三个元素与前两个排好序的数据，并将第三个元素放入适当的位置；3、比较第四个元素与前三个排好序的数据，并将第四个元素放入适当的位置；……4、直至把最后一个元素放入适当的位置。 例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）： 二、代码实现1234567891011121314151617public">
+  <meta name="description" content="一、算法思想1、首先比较数组的前两个数据，并排序；2、比较第三个元素与前两个排好序的数据，并将第三个元素放入适当的位置；3、比较第四个元素与前三个排好序的数据，并将第四个元素放入适当的位置；……4、直至把最后一个元素放入适当的位置。 例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）：">
 <meta name="keywords" content="algorithm,插入排序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法——插入排序">
 <meta property="og:url" content="//gentlebaymax.com/2017/08/01/algorithm-1/index.html">
 <meta property="og:site_name" content="何李杰的博客">
-<meta property="og:description" content="一、算法思想1、首先比较数组的前两个数据，并排序；2、比较第三个元素与前两个排好序的数据，并将第三个元素放入适当的位置；3、比较第四个元素与前三个排好序的数据，并将第四个元素放入适当的位置；……4、直至把最后一个元素放入适当的位置。 例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）： 二、代码实现1234567891011121314151617public">
+<meta property="og:description" content="一、算法思想1、首先比较数组的前两个数据，并排序；2、比较第三个元素与前两个排好序的数据，并将第三个元素放入适当的位置；3、比较第四个元素与前三个排好序的数据，并将第四个元素放入适当的位置；……4、直至把最后一个元素放入适当的位置。 例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）：">
 <meta property="og:image" content="//gentlebaymax.com/2017/08/01/algorithm-1/algorithm-1/charu_1.gif">
-<meta property="og:updated_time" content="2017-08-01T08:50:35.549Z">
+<meta property="og:updated_time" content="2017-08-23T14:53:10.520Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法——插入排序">
-<meta name="twitter:description" content="一、算法思想1、首先比较数组的前两个数据，并排序；2、比较第三个元素与前两个排好序的数据，并将第三个元素放入适当的位置；3、比较第四个元素与前三个排好序的数据，并将第四个元素放入适当的位置；……4、直至把最后一个元素放入适当的位置。 例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）： 二、代码实现1234567891011121314151617public">
+<meta name="twitter:description" content="一、算法思想1、首先比较数组的前两个数据，并排序；2、比较第三个元素与前两个排好序的数据，并将第三个元素放入适当的位置；3、比较第四个元素与前三个排好序的数据，并将第四个元素放入适当的位置；……4、直至把最后一个元素放入适当的位置。 例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）：">
 <meta name="twitter:image" content="//gentlebaymax.com/2017/08/01/algorithm-1/algorithm-1/charu_1.gif">
   
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
@@ -193,7 +193,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h2><p>1、首先比较数组的前两个数据，并排序；<br>2、比较第三个元素与前两个排好序的数据，并将第三个元素放入适当的位置；<br>3、比较第四个元素与前三个排好序的数据，并将第四个元素放入适当的位置；<br>……<br>4、直至把最后一个元素放入适当的位置。</p>
-<p>例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）：<br><img src="algorithm-1/charu_1.gif" alt="算法"></p>
+<p>例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）：<br><img src="algorithm-1/charu_1.gif" alt="算法"><br> <a id="more"></a></p>
 <h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">void</span> sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    <span class="keyword">for</span>(int i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</div><div class="line">    <span class="comment">// 待插入数据</span></div><div class="line">        tmp = arr[i];</div><div class="line">        <span class="keyword">for</span>(int j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</div><div class="line">            <span class="comment">// 判断是否大于tmp，大于则后移一位</span></div><div class="line">            <span class="keyword">if</span>(arr[j] &gt; tmp) &#123;</div><div class="line">                arr[j+<span class="number">1</span>] = arr[j];</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                 &#125;</div><div class="line">            &#125;</div><div class="line">        arr[j+<span class="number">1</span>] = tmp;</div><div class="line">        System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="三、算法复杂度和稳定性"><a href="#三、算法复杂度和稳定性" class="headerlink" title="三、算法复杂度和稳定性"></a>三、算法复杂度和稳定性</h2><ul>
 <li>平均/最差时间复杂度：O(n^2)</li>
@@ -430,10 +430,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
              
@@ -443,6 +439,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">选择排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -479,10 +483,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">测试流程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
               </li>
             
             <div class="clearfix"></div>

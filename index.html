@@ -256,14 +256,6 @@ var _hmt = _hmt || [];
 </li>
 <li><p>验证是否安装并启动成功</p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo netstat -tap <span class="string">| grep mysql</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>打开MySQL服务并使用root用户登录：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#启动 MySQL 服务</span></div><div class="line">sudo<span class="built_in"> service </span>mysql start             </div><div class="line"></div><div class="line"><span class="comment">#使用 root 用户登录，实验楼环境的密码为空，直接回车就可以登录</span></div><div class="line">mysql -u root</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</div></pre></td></tr></table></figure>
-</li>
-</ul>
         
           <a class="article-more-a" href="/2017/08/07/SQL-2/#more">more >></a>
         
@@ -428,40 +420,16 @@ var _hmt = _hmt || [];
 <li>说到底就是一个JS运行环境</li>
 <li>很多的前端开发工具都是基于node这个平台</li>
 <li>我们可以在node运行js代码</li>
-<li>目前有两个分支<ul>
+<li><p>目前有两个分支</p>
+<ul>
 <li>Node.js 0.12.7 官方版本 要求尽善尽美</li>
 <li>IO.js 是社区的产物，不是官方的东西，io.js有很多新特性，迭代非常快，社区推进非常快</li>
 <li>15年两者合并，发布node第一个正式版 4.0， 迭代速度又慢了</li>
 <li>node 5.x == io.js</li>
-<li>node 4.0 == node</li>
-</ul>
-</li>
-</ul>
-<h3 id="二、什么是NVM"><a href="#二、什么是NVM" class="headerlink" title="二、什么是NVM"></a>二、什么是NVM</h3><ul>
-<li>Node Version Manager(Node的版本管理工具)</li>
-<li>因为node的版本比较多，很多时候我们可能依赖多个版本，并要求自由切换</li>
-<li><p>常用操作：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nvm <span class="keyword">use</span> [对应的版本号] [平台架构（如果是<span class="number">32</span>系统需要写<span class="number">32</span>,<span class="number">64</span>位不用管）]</div><div class="line">nvm <span class="keyword">install</span> &lt;<span class="keyword">version</span>&gt; [arch]  安装</div><div class="line">nvm <span class="keyword">uninstall</span> &lt;<span class="keyword">version</span>&gt; 卸载</div><div class="line">nvm <span class="keyword">list</span> 查看已经安装版本</div></pre></td></tr></table></figure>
-</li>
-<li><p>官网</p>
-<ul>
-<li><a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="external">https://github.com/coreybutler/nvm-windows</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="二、什么是NPM"><a href="#二、什么是NPM" class="headerlink" title="二、什么是NPM"></a>二、什么是NPM</h3><ul>
-<li>Node Package Manager</li>
-<li>Node应用程序依赖包的管理工具</li>
-<li>安装卸载更新之类的操作</li>
-</ul>
-<ul>
-<li>官网<ul>
-<li><a href="https://www.npmjs.com/" target="_blank" rel="external">https://www.npmjs.com/</a></li>
-</ul>
-</li>
-<li>常用操作：<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 安装一个包，默认安装最新稳定版本</span></div><div class="line">npm install <span class="keyword">package</span><span class="number">_n</span>ame</div><div class="line"><span class="comment">// --save</span></div><div class="line"><span class="comment">// 初始化操作，给项目添加一个配置文件</span></div><div class="line">npm init</div></pre></td></tr></table></figure></li>
-</ul>
-
+<li>node 4.0 == node
+        
+          <a class="article-more-a" href="/2017/08/04/git-2/#more">more >></a>
+        
       
 
       
@@ -554,23 +522,10 @@ var _hmt = _hmt || [];
 </ul>
 <h3 id="二、安装GIT"><a href="#二、安装GIT" class="headerlink" title="二、安装GIT"></a>二、安装GIT</h3><ul>
 <li>git命令行工具</li>
-<li>基于git命令行的一个客户端软件（提供一个界面去管理源代码）</li>
-</ul>
-<h3 id="三、GIT命令操作"><a href="#三、GIT命令操作" class="headerlink" title="三、GIT命令操作"></a>三、GIT命令操作</h3><p><img src="git-1/git-guide.jpg" alt="GIT"></p>
-<h3 id="四、github"><a href="#四、github" class="headerlink" title="四、github"></a>四、github</h3><ul>
-<li><a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
-<li>GITHUB是一个GIT服务的提供商，</li>
-<li>提出社交化编程</li>
-</ul>
-<h3 id="五、git的使用流程"><a href="#五、git的使用流程" class="headerlink" title="五、git的使用流程"></a>五、git的使用流程</h3><p>1、初始化一个本地GIT仓储<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 定位到仓储文件夹目录</div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /dir</span></div><div class="line">// 初始化本地仓储</div><div class="line"><span class="meta">$</span><span class="bash"> git init</span></div></pre></td></tr></table></figure></p>
-<p>2、添加本地GIT忽略清单文件.gitignore<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">//</span> 添加OS X中系统文件<span class="string">.DS_Store</span>到忽略清单，这将忽略项目任意目录下的<span class="string">.DS_Store</span>文件或是文件夹</div><div class="line">$ <span class="keyword">echo</span> <span class="string">.DS_Store</span> &gt;&gt; <span class="string">.gitignore</span></div></pre></td></tr></table></figure></p>
-<p>3、查看本地仓储的变更状态<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git status</span></div></pre></td></tr></table></figure></p>
-<p>4、添加本地暂存（托管）文件<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 添加指定文件名的文件</div><div class="line">$ git <span class="keyword">add</span><span class="bash"> README.md</span></div><div class="line">// 添加通配符匹配的文件</div><div class="line">$ git <span class="keyword">add</span><span class="bash"> *.md</span></div><div class="line">// 添加所有未托管的文件（忽略.gitignore清单中的列表）</div><div class="line">$ git <span class="keyword">add</span><span class="bash"> --all</span></div></pre></td></tr></table></figure></p>
-<p>5、提交被托管的文件变化到本地仓储<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git commit -m <span class="string">'Initial commit(change log)'</span></span></div></pre></td></tr></table></figure></p>
-<p>6、为仓储添加远端（服务器端）地址<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 添加一个远端地址并起了一个别名叫origin</span></div><div class="line"><span class="symbol">$</span> git remote add origin https:<span class="comment">//github.com/Micua/Git.git</span></div><div class="line"><span class="comment">// 查看现有的远端列表</span></div><div class="line"><span class="symbol">$</span> git remote -v</div></pre></td></tr></table></figure></p>
-<p>7、将本地仓储的提交记录推送到远端的master分支<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">push</span> -u <span class="built_in">origin</span> master</div></pre></td></tr></table></figure></p>
-<p>8、拉取远端master分支的更新记录到本地<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git pull origin master</span></div></pre></td></tr></table></figure></p>
-
+<li>基于git命令行的一个客户端软件（提供一个界面去管理源代码）
+        
+          <a class="article-more-a" href="/2017/08/04/git-1/#more">more >></a>
+        
       
 
       
@@ -644,15 +599,10 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h2><p>（升序排列）从起始元素开始，对数组中两两相邻的元素进行比较，将值较小的元素放在前面，值较大的元素放在后面，一轮比较完毕，一个最大的数沉底成为数组中的最后一个元素，一些较小的数如同气泡一样上浮一个位置（因此成为冒泡或者起泡排序）。n个数，经过n-1轮比较后完成排序。</p>
-<p>具体流程如下：<br>　　1、对要排序的数组中的数据，依次比较相邻的两个数据的大小。<br>　　2、如果前面的数据大于后面的数据，就把这两个数据进行交换。这样一轮比较和交换过后，就把最小的数据放在数组的最前面；<br>　　3、按照上述比较和交换的方法，把剩下的数据再进行相同操作，最后，便可按照从小到大的顺序对数组完成排序。</p>
-<p>例如：对序列6 5 3 1 8 7 2 4进行冒泡排序的过程如下所示（图片来自维基百科）：<br><img src="algorithm-3/maopao.gif" alt="算法"></p>
-<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public void sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    <span class="keyword">for</span>(int i = 1; i &lt; arr.length; i++) &#123;</div><div class="line">         // 判断相邻两个数据的大小，并把较大的数往后冒泡</div><div class="line">         <span class="keyword">for</span>(int j = 0; j &lt; arr.length - 1; j++) &#123;</div><div class="line">             <span class="keyword">if</span>(arr[j] &gt; arr[j+1]) &#123;</div><div class="line">                 tmp = arr[j];</div><div class="line">                 arr[j] = arr[j+1];</div><div class="line">                 arr[j+1] = tmp;</div><div class="line">             &#125;</div><div class="line">         &#125;</div><div class="line">         System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">     &#125;</div><div class="line">     <span class="built_in">return</span> arr;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<h2 id="三、算法复杂度和稳定性"><a href="#三、算法复杂度和稳定性" class="headerlink" title="三、算法复杂度和稳定性"></a>三、算法复杂度和稳定性</h2><ul>
-<li>平均/最差时间复杂度：O(n^2)</li>
-<li>空间复杂度：O(1)</li>
-<li>稳定性：稳定</li>
-</ul>
-
+<p>具体流程如下：<br>　　1、对要排序的数组中的数据，依次比较相邻的两个数据的大小。<br>　　2、如果前面的数据大于后面的数据，就把这两个数据进行交换。这样一轮比较和交换过后，就把最小的数据放在数组的最前面；<br>　　3、按照上述比较和交换的方法，把剩下的数据再进行相同操作，最后，便可按照从小到大的顺序对数组完成排序。<br>
+        
+          <a class="article-more-a" href="/2017/08/01/algorithm-3/#more">more >></a>
+        
       
 
       
@@ -730,14 +680,10 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h2><p>1、首先从原数组中选择最小的1个数据，将其置于第一个位置。<br>2、然后从剩下的数据中再选择其中最小的一个数据，并将其置于原数组的第二个位置。<br>3、不断重复选择和交换的过程，直至最后排序完成。</p>
-<p>例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）：<br><img src="algorithm-2/xuanze.gif" alt="算法"></p>
-<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">void</span> sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    <span class="comment">// 第n轮排序过程中的较小数的下标</span></div><div class="line">    int small;</div><div class="line">    <span class="keyword">if</span>(num.length &lt; <span class="number">2</span>) <span class="keyword">return</span>;    </div><div class="line">    <span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</div><div class="line">        small = i;</div><div class="line">        <span class="comment">// 找出最小的数的下标</span></div><div class="line">        <span class="keyword">for</span>(int j = i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</div><div class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[small]) &#123;</div><div class="line">                small = j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 交换</span></div><div class="line">        <span class="keyword">if</span>(small != i) &#123;</div><div class="line">            tmp = arr[i];</div><div class="line">            arr[i] = arr[small];</div><div class="line">            arr[small] = tmp;</div><div class="line">        &#125;</div><div class="line">        System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="三、算法复杂度和稳定性"><a href="#三、算法复杂度和稳定性" class="headerlink" title="三、算法复杂度和稳定性"></a>三、算法复杂度和稳定性</h2><ul>
-<li>平均/最差时间复杂度：O(n^2)</li>
-<li>空间复杂度：O(1)</li>
-<li>稳定性：不稳定</li>
-</ul>
-
+<p>例如：对序列8 5 2 6 9 3 1 4 0 7进行选择排序的过程如下所示（图片来自维基百科）：<br><img src="algorithm-2/xuanze.gif" alt="算法"><br>
+        
+          <a class="article-more-a" href="/2017/08/01/algorithm-2/#more">more >></a>
+        
       
 
       
@@ -815,14 +761,10 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、算法思想"><a href="#一、算法思想" class="headerlink" title="一、算法思想"></a>一、算法思想</h2><p>1、首先比较数组的前两个数据，并排序；<br>2、比较第三个元素与前两个排好序的数据，并将第三个元素放入适当的位置；<br>3、比较第四个元素与前三个排好序的数据，并将第四个元素放入适当的位置；<br>……<br>4、直至把最后一个元素放入适当的位置。</p>
-<p>例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）：<br><img src="algorithm-1/charu_1.gif" alt="算法"></p>
-<h2 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public <span class="keyword">void</span> sort(int[] arr) &#123;</div><div class="line">    int tmp;</div><div class="line">    <span class="keyword">for</span>(int i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</div><div class="line">    <span class="comment">// 待插入数据</span></div><div class="line">        tmp = arr[i];</div><div class="line">        <span class="keyword">for</span>(int j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</div><div class="line">            <span class="comment">// 判断是否大于tmp，大于则后移一位</span></div><div class="line">            <span class="keyword">if</span>(arr[j] &gt; tmp) &#123;</div><div class="line">                arr[j+<span class="number">1</span>] = arr[j];</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                 &#125;</div><div class="line">            &#125;</div><div class="line">        arr[j+<span class="number">1</span>] = tmp;</div><div class="line">        System.out.println(i + <span class="string">":"</span> + Arrays.toString(arr));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="三、算法复杂度和稳定性"><a href="#三、算法复杂度和稳定性" class="headerlink" title="三、算法复杂度和稳定性"></a>三、算法复杂度和稳定性</h2><ul>
-<li>平均/最差时间复杂度：O(n^2)</li>
-<li>空间复杂度：O(1)</li>
-<li>稳定性：稳定</li>
-</ul>
-
+<p>例如：对序列6 5 3 1 8 7 2 4进行插入排序的过程如下所示（图片来自维基百科）：<br><img src="algorithm-1/charu_1.gif" alt="算法"><br>
+        
+          <a class="article-more-a" href="/2017/08/01/algorithm-1/#more">more >></a>
+        
       
 
       
@@ -984,10 +926,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
              
@@ -997,6 +935,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">选择排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1033,10 +979,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">测试流程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
               </li>
             
             <div class="clearfix"></div>

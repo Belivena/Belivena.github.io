@@ -15,7 +15,7 @@
 <meta property="og:url" content="//gentlebaymax.com/2016/08/23/test-junit2/index.html">
 <meta property="og:site_name" content="何李杰的博客">
 <meta property="og:description" content="一、JUnit4中的测试套件 测试套件就是组织测试类一起运行的 写一个作为测试套件入口类，这个类里不包含其他的方法 更改测试运行器Suite.class 将要测试的类作为数组传入到Suite.SuiteClasses({}) 1234567import static org.junit.Assert.*;import org.junit.runner.RunWith;import org.juni">
-<meta property="og:updated_time" content="2017-08-23T11:57:31.655Z">
+<meta property="og:updated_time" content="2017-08-23T14:54:39.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JUnit4中的套件和参数设置">
 <meta name="twitter:description" content="一、JUnit4中的测试套件 测试套件就是组织测试类一起运行的 写一个作为测试套件入口类，这个类里不包含其他的方法 更改测试运行器Suite.class 将要测试的类作为数组传入到Suite.SuiteClasses({}) 1234567import static org.junit.Assert.*;import org.junit.runner.RunWith;import org.juni">
@@ -196,6 +196,7 @@ var _hmt = _hmt || [];
 <li>更改测试运行器Suite.class</li>
 <li><p>将要测试的类作为数组传入到Suite.SuiteClasses({})</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import static org.junit.Assert.*;</div><div class="line">import org.junit.runner.RunWith;</div><div class="line">import org.junit.runners.Suite;</div><div class="line">@RunWith(Suite.class)</div><div class="line">@Suite.SuiteClasses(&#123;TaskTest1.class,TaskTest2.class,TaskTest3.class&#125;)</div><div class="line">public class SuitTest &#123;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="二、JUnit4中的参数化设置"><a href="#二、JUnit4中的参数化设置" class="headerlink" title="二、JUnit4中的参数化设置"></a>二、JUnit4中的参数化设置</h2></li>
 <li>更改默认的测试运行器为RunWith(Parameterized.class)</li>
 <li>声明变量来存放预期值和结果值</li>
@@ -433,10 +434,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">algorithm</a>
               </li>
              
@@ -446,6 +443,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">选择排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -482,10 +487,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">测试流程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
               </li>
             
             <div class="clearfix"></div>
