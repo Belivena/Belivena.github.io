@@ -4,21 +4,23 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>测试基础 | 何李杰的博客</title>
+  <title>JUnit4简介 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、测试定义  通过人工或自动的手段，对被测对象进行检测活动，目的在于发现被测对象是否实现用户的需求，或者弄清实际结果与预测结果之间的差异。 二、 测试目的 发现被测对象与用户需求间的差异—俗称找bug。 通过测试活动发现并解决缺陷，增加人们对被测对象的质量信心。 通过测试活动，获取被测对象的质量信息，为决策提供数据依据。 通过测试活动，预防缺陷，从而降低项目或产品的风险。  三、 测试原则 测">
-<meta name="keywords" content="iTesting,测试理论">
+  <meta name="description" content="一、JUnit的介绍和使用JUnit是一个Java编程语言单元测试框架。JUnit有很重要的发展，测试驱动的开发，是一个统称为xUnit的起源与JUnit的单元测试框架之一。1234  @Testpublic void testAdd() &amp;#123;	fail(&quot;Not yet implemented&quot;);&amp;#125;  测试方法上必须使用@Test进行修饰 测试方法必须使用public voi">
+<meta name="keywords" content="iTesting,JUnit4">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试基础">
-<meta property="og:url" content="//gentlebaymax.com/2017/07/12/test1/index.html">
+<meta property="og:title" content="JUnit4简介">
+<meta property="og:url" content="//gentlebaymax.com/2016/08/23/test-junit1/index.html">
 <meta property="og:site_name" content="何李杰的博客">
-<meta property="og:description" content="一、测试定义  通过人工或自动的手段，对被测对象进行检测活动，目的在于发现被测对象是否实现用户的需求，或者弄清实际结果与预测结果之间的差异。 二、 测试目的 发现被测对象与用户需求间的差异—俗称找bug。 通过测试活动发现并解决缺陷，增加人们对被测对象的质量信心。 通过测试活动，获取被测对象的质量信息，为决策提供数据依据。 通过测试活动，预防缺陷，从而降低项目或产品的风险。  三、 测试原则 测">
-<meta property="og:image" content="//gentlebaymax.com/2017/07/12/test1/test1_1.jpg">
-<meta property="og:updated_time" content="2017-08-01T09:07:41.388Z">
+<meta property="og:description" content="一、JUnit的介绍和使用JUnit是一个Java编程语言单元测试框架。JUnit有很重要的发展，测试驱动的开发，是一个统称为xUnit的起源与JUnit的单元测试框架之一。1234  @Testpublic void testAdd() &amp;#123;	fail(&quot;Not yet implemented&quot;);&amp;#125;  测试方法上必须使用@Test进行修饰 测试方法必须使用public voi">
+<meta property="og:image" content="//gentlebaymax.com/2016/08/23/test-junit1/test1.png">
+<meta property="og:image" content="//gentlebaymax.com/2016/08/23/test-junit1/test2.png">
+<meta property="og:image" content="//gentlebaymax.com/2016/08/23/test-junit1/test3.png">
+<meta property="og:updated_time" content="2017-08-23T11:55:32.657Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试基础">
-<meta name="twitter:description" content="一、测试定义  通过人工或自动的手段，对被测对象进行检测活动，目的在于发现被测对象是否实现用户的需求，或者弄清实际结果与预测结果之间的差异。 二、 测试目的 发现被测对象与用户需求间的差异—俗称找bug。 通过测试活动发现并解决缺陷，增加人们对被测对象的质量信心。 通过测试活动，获取被测对象的质量信息，为决策提供数据依据。 通过测试活动，预防缺陷，从而降低项目或产品的风险。  三、 测试原则 测">
-<meta name="twitter:image" content="//gentlebaymax.com/2017/07/12/test1/test1_1.jpg">
+<meta name="twitter:title" content="JUnit4简介">
+<meta name="twitter:description" content="一、JUnit的介绍和使用JUnit是一个Java编程语言单元测试框架。JUnit有很重要的发展，测试驱动的开发，是一个统称为xUnit的起源与JUnit的单元测试框架之一。1234  @Testpublic void testAdd() &amp;#123;	fail(&quot;Not yet implemented&quot;);&amp;#125;  测试方法上必须使用@Test进行修饰 测试方法必须使用public voi">
+<meta name="twitter:image" content="//gentlebaymax.com/2016/08/23/test-junit1/test1.png">
   
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
   
@@ -143,7 +145,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-test1" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-test-junit1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -153,7 +155,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      测试基础
+      JUnit4简介
     </h1>
   
 
@@ -161,53 +163,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/2017/07/12/test1/test1_1.jpg" alt="测试"></p>
-<h2 id="一、测试定义"><a href="#一、测试定义" class="headerlink" title="一、测试定义"></a>一、测试定义</h2><p>  通过人工或自动的手段，对被测对象进行检测活动，目的在于发现被测对象是否实现用户的需求，或者弄清实际结果与预测结果之间的差异。</p>
-<h2 id="二、-测试目的"><a href="#二、-测试目的" class="headerlink" title="二、 测试目的"></a>二、 测试目的</h2><ul>
-<li>发现被测对象与用户需求间的差异—俗称找bug。</li>
-<li>通过测试活动发现并解决缺陷，增加人们对被测对象的质量信心。</li>
-<li>通过测试活动，获取被测对象的质量信息，为决策提供数据依据。</li>
-<li>通过测试活动，预防缺陷，从而降低项目或产品的风险。</li>
-</ul>
-<h2 id="三、-测试原则"><a href="#三、-测试原则" class="headerlink" title="三、 测试原则"></a>三、 测试原则</h2><ul>
-<li>测试证明软件存在缺陷</li>
-<li>不可能执行穷尽测试</li>
-<li>测试应该尽早启动，尽早介入</li>
-<li>缺陷存在群集现象</li>
-<li>杀虫剂悖论</li>
-<li>不同的测试活动依赖不同的测试背景</li>
-<li>不存在缺陷的谬论</li>
-</ul>
-<h2 id="四、-测试对象"><a href="#四、-测试对象" class="headerlink" title="四、 测试对象"></a>四、 测试对象</h2><ul>
-<li>软件源代码</li>
-<li>与软件源代码匹配的文档</li>
-<li>支撑软件源代码运行的配置数据</li>
-<li>需求阶段：需求文档—测试需求文档是否正确实现了用户的需求</li>
-<li>系统设计阶段：概要设计文档、详细设计文档、是否有设计或逻辑上的错误</li>
-<li>编码阶段：测试源代码—发现编程上的错误</li>
-<li>系统测试阶段：被测对象是否满足用户需求</li>
-</ul>
-<h2 id="五、-测试级别（测试阶段）"><a href="#五、-测试级别（测试阶段）" class="headerlink" title="五、 测试级别（测试阶段）"></a>五、 测试级别（测试阶段）</h2><h3 id="5-1-单元测试"><a href="#5-1-单元测试" class="headerlink" title="5.1 单元测试"></a>5.1 单元测试</h3><p>  针对被测系统最小的组成单元实施的测试活动，一般是类或函数，也可能是最小的功能单元。</p>
-<h3 id="5-2-集成测试"><a href="#5-2-集成测试" class="headerlink" title="5.2 集成测试"></a>5.2 集成测试</h3><p>  针对组件/单元与组件/单元之间的接口实施的测试活动，验证接口设计是否与设计相符。<br>分三种集成：函数间集成、模块间集成、子系统间集成。</p>
-<h3 id="5-3-系统测试-最常见"><a href="#5-3-系统测试-最常见" class="headerlink" title="5.3 系统测试(最常见)"></a>5.3 系统测试(最常见)</h3><p>  通过集成测试的软件，部署在真实的用户环境下执行测试。<br>  接近用户需求。<br>  通过黑盒测试。</p>
-<h3 id="5-4-验收测试"><a href="#5-4-验收测试" class="headerlink" title="5.4 验收测试"></a>5.4 验收测试</h3><p>  以用户为主的测试，验收组应该由项目组成员、用户代表组成。</p>
+        <h2 id="一、JUnit的介绍和使用"><a href="#一、JUnit的介绍和使用" class="headerlink" title="一、JUnit的介绍和使用"></a>一、JUnit的介绍和使用</h2><p>JUnit是一个Java编程语言单元测试框架。JUnit有很重要的发展，测试驱动的开发，是一个统称为xUnit的起源与JUnit的单元测试框架之一。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">  @Test</div><div class="line">public void <span class="function"><span class="title">testAdd</span></span>() &#123;</div><div class="line">	fail(<span class="string">"Not yet implemented"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <ul>
-<li>α测试—由用户在开发环境下执行的测试活动，开发者在测试人员身边，发现问题及时沟通解决。在受控环境下执行测试。</li>
-<li>β测试—开发者不在测试人员身边，发现问题由专人统一收集，再由研发人员进行修改。在不受控环境下执行测试。</li>
-<li>UAT测试—用户接受度测试：一般商业用户验证系统可用性进行的测试。</li>
+<li>测试方法上必须使用@Test进行修饰</li>
+<li>测试方法必须使用public void进行修饰，不能带任何的参数</li>
+<li>新建一个源代码目录来存放我们测试代码</li>
+<li>测试类的包应该和被测试类保持一致</li>
+<li>测试单元中的每个方法必须可以独立测试，测试方法间不能有任何的依赖</li>
+<li>测试类使用Test作为类名的后缀（不是必须的）</li>
+<li>测试方法使用test作为方法的前缀（不是必须的）<h2 id="二、测试失败的两种情况"><a href="#二、测试失败的两种情况" class="headerlink" title="二、测试失败的两种情况"></a>二、测试失败的两种情况</h2><img src="/2016/08/23/test-junit1/test1.png" alt="测试"><br>Failure一般是由单元测试使用的断言方法判断失败所引起的，这就表示测试点发现了问题，就是说程序输出的结果和我们预期的不一样<br><img src="/2016/08/23/test-junit1/test2.png" alt="测试"><br>error是由代码异常引起的，它可以产生于测试代码本身的错误，也可以是被测试代码中的一个隐藏bug<br>注意：测试用例不是用来证明你是对的，而是用来证明你没有错。<h2 id="三、JUnit的运行流程"><a href="#三、JUnit的运行流程" class="headerlink" title="三、JUnit的运行流程"></a>三、JUnit的运行流程</h2><img src="/2016/08/23/test-junit1/test3.png" alt="测试"></li>
+</ul>
+<ol>
+<li>@BeforeClass修饰的方法会在所有方法被调用前执行，而且该方法是静态的，所以当测试类被加载后接着就会运行它，而且在内存中它只会存在一份实例，它比较适合加载配置文件。</li>
+<li>@AfterClass所修饰的方法通常用来对资源的清理，如关闭数据库的连接</li>
+<li>@before和@After会在每个测试方法的前后各执行一次。<h2 id="四、JUnit常用的注解"><a href="#四、JUnit常用的注解" class="headerlink" title="四、JUnit常用的注解"></a>四、JUnit常用的注解</h2></li>
+</ol>
+<ul>
+<li>@BeforeClass它会在所有方法运行前被执行，static修饰。</li>
+<li>@AfterClass它会在所有的方法被运行结束后被执行，static修饰。</li>
+<li>@before r会在每个测试方法前执行一次。</li>
+<li>@After会在每个测试方法后执行一次。</li>
+<li>@Test:将一个普通的方法修饰成为一个测试方法<br>  <strong> @Test(expected=XX.class)
+  </strong> @Test(timeout=毫秒)</li>
+<li>@Ignore:所修饰的测试方法会被测试运行器忽略</li>
+<li>@RunWith:可以更改测试运行器org.junit.runner.Runer<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@Ignore</div><div class="line">@Test(expected=ArithmeticException.class)</div><div class="line">public void <span class="function"><span class="title">testDivid</span></span>()&#123;</div><div class="line">	assertEquals(3, new Calculate().divid(6, 0));</div><div class="line">&#125;</div><div class="line">@Test(timeout=2000)</div><div class="line">public void <span class="function"><span class="title">testWhile</span></span>()&#123;</div><div class="line">	<span class="keyword">while</span>(<span class="literal">true</span>)&#123;</div><div class="line">		System.out.println(<span class="string">"run forever"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2017/07/12/test1/" class="archive-article-date">
-  	<time datetime="2017-07-12T02:32:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-12</time>
+      <a href="/2016/08/23/test-junit1/" class="archive-article-date">
+  	<time datetime="2016-08-23T11:35:45.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-08-23</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iTesting/">iTesting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试理论/">测试理论</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JUnit4/">JUnit4</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iTesting/">iTesting</a></li></ul>
 	</div>
 
       
@@ -220,20 +213,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/25/test2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/08/23/test-junit2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          系统测试类型、软件测试方法
+          JUnit4中的套件和参数设置
         
       </div>
     </a>
   
-  
-    <a href="/2017/07/11/domo/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">用热爱抵御生活的琐碎</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -277,7 +265,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="test1" data-title="测试基础" data-url="//gentlebaymax.com/2017/07/12/test1/"></div>
+	<div class="ds-thread" data-thread-key="test-junit1" data-title="JUnit4简介" data-url="//gentlebaymax.com/2016/08/23/test-junit1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
