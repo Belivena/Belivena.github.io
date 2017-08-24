@@ -9,13 +9,13 @@
   <title>SQL基础 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、数据库相关1.1 数据库和SQL概念数据库（Database）  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。结构化查询语言(St">
-<meta name="keywords" content="MySQL,SQL">
+<meta name="keywords" content="SQL,MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL基础">
 <meta property="og:url" content="//gentlebaymax.com/2017/08/07/SQL-1/index.html">
 <meta property="og:site_name" content="何李杰的博客">
 <meta property="og:description" content="一、数据库相关1.1 数据库和SQL概念数据库（Database）  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。结构化查询语言(St">
-<meta property="og:updated_time" content="2017-08-23T17:22:34.396Z">
+<meta property="og:updated_time" content="2017-08-24T02:20:17.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL基础">
 <meta name="twitter:description" content="一、数据库相关1.1 数据库和SQL概念数据库（Database）  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。结构化查询语言(St">
@@ -181,15 +181,32 @@ var _hmt = _hmt || [];
     </h1>
   
 
-        <!-- 显示阅读和评论数 -->
-
+  
+  <section id="comments">
+<!--高速版，加载速度快，使用前需测试页面的兼容性-->
+<div id="SOHUCS" sid="SQL基础"></div>
+<script>
+  (function(){
+    var appid = 'cytbbsxXo',
+    conf = '15327a8a44831531fdd2f2b5b4f87b7f';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+    window.SCS_NO_IFRAME = true;
+  })()
+</script>    
+  </section>
+  
         
         <a href="/2017/08/07/SQL-1/" class="archive-article-date">
   	<time datetime="2017-08-07T02:53:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
 </a>
         
       </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、数据库相关"><a href="#一、数据库相关" class="headerlink" title="一、数据库相关"></a>一、数据库相关</h2><h3 id="1-1-数据库和SQL概念"><a href="#1-1-数据库和SQL概念" class="headerlink" title="1.1 数据库和SQL概念"></a>1.1 数据库和SQL概念</h3><p>数据库（Database）<br>  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。<br>结构化查询语言(Structured Query Language)简称 SQL<br>  是上世纪 70 年代由 IBM 公司开发，用于对数据库进行操作的语言。更详细地说，SQL是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名。<br><a id="more"></a></p>
@@ -299,7 +316,6 @@ var _hmt = _hmt || [];
 <p>如下所示，搭建一个成绩管理系统：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> gradesystem;</div><div class="line"><span class="keyword">use</span> gradesystem</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student</div><div class="line">(</div><div class="line"><span class="keyword">sid</span> <span class="built_in">int</span>(<span class="number">10</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line">sname <span class="built_in">CHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</div><div class="line">gender <span class="built_in">CHAR</span>(<span class="number">6</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span></div><div class="line">);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> course</div><div class="line">(</div><div class="line">cid <span class="built_in">int</span>(<span class="number">10</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line">cname <span class="built_in">CHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span></div><div class="line">);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span>  mark</div><div class="line">(</div><div class="line"><span class="keyword">mid</span> <span class="built_in">int</span>(<span class="number">10</span>) PRIMARY <span class="keyword">KEY</span>,</div><div class="line"><span class="keyword">sid</span> <span class="built_in">int</span>(<span class="number">10</span>),</div><div class="line">cid <span class="built_in">int</span>(<span class="number">10</span>),</div><div class="line">score <span class="built_in">int</span>(<span class="number">3</span>) <span class="keyword">DEFAULT</span> <span class="number">0</span>,</div><div class="line"><span class="keyword">CONSTRAINT</span> FK_mark_sid FOREIGN <span class="keyword">KEY</span> (<span class="keyword">sid</span>) <span class="keyword">REFERENCES</span> student (<span class="keyword">sid</span>),</div><div class="line"><span class="keyword">CONSTRAINT</span> FK_mark_cid FOREIGN <span class="keyword">KEY</span> (cid) <span class="keyword">REFERENCES</span> course (cid)</div><div class="line">);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> student <span class="keyword">VALUES</span></div><div class="line">(<span class="number">1</span>, <span class="string">'Tom'</span>, <span class="string">'male'</span>),</div><div class="line">(<span class="number">2</span>, <span class="string">'Jack'</span>, <span class="string">'male'</span>),</div><div class="line">(<span class="number">3</span>, <span class="string">'Rose'</span>, <span class="string">'female'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> course <span class="keyword">VALUES</span></div><div class="line">(<span class="number">1</span>, <span class="string">'math'</span>),</div><div class="line">(<span class="number">2</span>, <span class="string">'physics'</span>),</div><div class="line">(<span class="number">3</span>, <span class="string">'chemistry'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> mark <span class="keyword">VALUES</span></div><div class="line">(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">80</span>),</div><div class="line">(<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">85</span>),</div><div class="line">(<span class="number">3</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">90</span>),</div><div class="line">(<span class="number">4</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">60</span>),</div><div class="line">(<span class="number">5</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">90</span>),</div><div class="line">(<span class="number">6</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">75</span>),</div><div class="line">(<span class="number">7</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">95</span>),</div><div class="line">(<span class="number">8</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">75</span>),</div><div class="line">(<span class="number">9</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">85</span>);</div></pre></td></tr></table></figure></p>
 
       
-
       
     </div>
     <div class="article-info article-info-index">
@@ -310,11 +326,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
@@ -414,6 +430,19 @@ var _hmt = _hmt || [];
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、数据库相关"><span class="toc-number">1.</span> <span class="toc-text">一、数据库相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-数据库和SQL概念"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 数据库和SQL概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-MySQL介绍"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 MySQL介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、数据类型"><span class="toc-number">2.</span> <span class="toc-text">二、数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、-约束分类"><span class="toc-number">3.</span> <span class="toc-text">三、 约束分类</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -568,7 +597,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -576,7 +605,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -592,7 +621,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color5">冒泡排序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -600,7 +629,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">冒泡排序</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -620,11 +649,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">测试理论</a>
+                <a href="javascript:void(0)" class="js-tag color2">JUnit4</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">JUnit4</a>
+                <a href="javascript:void(0)" class="js-tag color5">测试理论</a>
               </li>
              
               <li class="article-tag-list-item">
