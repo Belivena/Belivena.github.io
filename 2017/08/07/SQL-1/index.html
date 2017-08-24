@@ -9,13 +9,13 @@
   <title>SQL基础 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、数据库相关1.1 数据库和SQL概念数据库（Database）  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。结构化查询语言(St">
-<meta name="keywords" content="SQL,MySQL">
+<meta name="keywords" content="MySQL,SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL基础">
 <meta property="og:url" content="//gentlebaymax.com/2017/08/07/SQL-1/index.html">
 <meta property="og:site_name" content="何李杰的博客">
 <meta property="og:description" content="一、数据库相关1.1 数据库和SQL概念数据库（Database）  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。结构化查询语言(St">
-<meta property="og:updated_time" content="2017-08-24T02:20:17.048Z">
+<meta property="og:updated_time" content="2017-08-24T02:28:32.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL基础">
 <meta name="twitter:description" content="一、数据库相关1.1 数据库和SQL概念数据库（Database）  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。结构化查询语言(St">
@@ -207,6 +207,33 @@ var _hmt = _hmt || [];
 </a>
         
       </header>
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+  <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、数据库相关"><span class="toc-number">1.</span> <span class="toc-text">一、数据库相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-数据库和SQL概念"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 数据库和SQL概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-MySQL介绍"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 MySQL介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、数据类型"><span class="toc-number">2.</span> <span class="toc-text">二、数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、-约束分类"><span class="toc-number">3.</span> <span class="toc-text">三、 约束分类</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+  function showToc(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:block");
+    show_toc_btn.setAttribute("style","display:none");
+    };
+  function showBtn(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:none");
+    show_toc_btn.setAttribute("style","display:block");
+    };
+   </script>
+         
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、数据库相关"><a href="#一、数据库相关" class="headerlink" title="一、数据库相关"></a>一、数据库相关</h2><h3 id="1-1-数据库和SQL概念"><a href="#1-1-数据库和SQL概念" class="headerlink" title="1.1 数据库和SQL概念"></a>1.1 数据库和SQL概念</h3><p>数据库（Database）<br>  是按照数据结构来组织、存储和管理数据的仓库，它的产生距今已有六十多年。随着信息技术和市场的发展，数据库变得无处不在：它在电子商务、银行系统等众多领域都被广泛使用，且成为其系统的重要组成部分。数据库用于记录数据，使用数据库记录数据可以表现出各种数据间的联系，也可以很方便地对所记录的数据进行增、删、改、查等操作。<br>结构化查询语言(Structured Query Language)简称 SQL<br>  是上世纪 70 年代由 IBM 公司开发，用于对数据库进行操作的语言。更详细地说，SQL是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名。<br><a id="more"></a></p>
@@ -326,11 +353,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
         		</li>
       		
 		</ul>
@@ -597,7 +624,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -605,7 +632,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL语句</a>
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,15 +640,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">选择排序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">插入排序</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">冒泡排序</a>
+                <a href="javascript:void(0)" class="js-tag color5">选择排序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -630,6 +653,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">冒泡排序</a>
               </li>
              
               <li class="article-tag-list-item">
