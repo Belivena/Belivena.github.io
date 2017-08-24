@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//gentlebaymax.com">
-  <title>MySQL基本操作 | 何李杰的博客</title>
+  <title>进程与线程 | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql">
-<meta name="keywords" content="MySQL,SQL语句">
+  <meta name="description" content="一、线程1.线程与多线程 线程是程序中一个单一的顺序控制流程，是程序执行流的最小单元； 一个多线程程序包含两个或多个能并发运行的部分。程序的每一部分都称作一个线程，并且每个线程定义了一个独立的执行路径； 线程调度是指按照特定机制为多个线程分配CPU的使用权；有两种调度模型：分时调度模型和抢占式调度模型。2.一个线程的生命周期">
+<meta name="keywords" content="OS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL基本操作">
-<meta property="og:url" content="//gentlebaymax.com/2017/08/07/SQL-2/index.html">
+<meta property="og:title" content="进程与线程">
+<meta property="og:url" content="//gentlebaymax.com/2017/08/24/caozuo-1/index.html">
 <meta property="og:site_name" content="何李杰的博客">
-<meta property="og:description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql">
-<meta property="og:updated_time" content="2017-08-24T02:20:53.301Z">
+<meta property="og:description" content="一、线程1.线程与多线程 线程是程序中一个单一的顺序控制流程，是程序执行流的最小单元； 一个多线程程序包含两个或多个能并发运行的部分。程序的每一部分都称作一个线程，并且每个线程定义了一个独立的执行路径； 线程调度是指按照特定机制为多个线程分配CPU的使用权；有两种调度模型：分时调度模型和抢占式调度模型。2.一个线程的生命周期">
+<meta property="og:image" content="//gentlebaymax.com/images/os-1.png">
+<meta property="og:image" content="//gentlebaymax.com/images/os-2.jpg">
+<meta property="og:image" content="//gentlebaymax.com/images/os-3.jpg">
+<meta property="og:updated_time" content="2017-08-24T08:14:59.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL基本操作">
-<meta name="twitter:description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql">
+<meta name="twitter:title" content="进程与线程">
+<meta name="twitter:description" content="一、线程1.线程与多线程 线程是程序中一个单一的顺序控制流程，是程序执行流的最小单元； 一个多线程程序包含两个或多个能并发运行的部分。程序的每一部分都称作一个线程，并且每个线程定义了一个独立的执行路径； 线程调度是指按照特定机制为多个线程分配CPU的使用权；有两种调度模型：分时调度模型和抢占式调度模型。2.一个线程的生命周期">
+<meta name="twitter:image" content="//gentlebaymax.com/images/os-1.png">
   
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
   
@@ -170,21 +174,21 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SQL-2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-caozuo-1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MySQL基本操作
+      进程与线程
     </h1>
   
 
   
   <section id="comments">
 <!--高速版，加载速度快，使用前需测试页面的兼容性-->
-<div id="SOHUCS" sid="MySQL基本操作"></div>
+<div id="SOHUCS" sid="进程与线程"></div>
 <script>
   (function(){
     var appid = 'cytbbsxXo',
@@ -202,8 +206,8 @@ var _hmt = _hmt || [];
   </section>
   
         
-        <a href="/2017/08/07/SQL-2/" class="archive-article-date">
-  	<time datetime="2017-08-07T04:42:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
+        <a href="/2017/08/24/caozuo-1/" class="archive-article-date">
+  	<time datetime="2017-08-24T02:57:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
 </a>
         
       </header>
@@ -216,7 +220,7 @@ var _hmt = _hmt || [];
   <div id="toc-article" class="toc-article">
       <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
     <strong class="toc-title">文章目录</strong>
-           
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、线程"><span class="toc-number">1.</span> <span class="toc-text">一、线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-线程与多线程"><span class="toc-number">1.1.</span> <span class="toc-text">1.线程与多线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-一个线程的生命周期"><span class="toc-number">1.2.</span> <span class="toc-text">2.一个线程的生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-新建状态"><span class="toc-number">1.2.1.</span> <span class="toc-text">(1)新建状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-就绪状态"><span class="toc-number">1.2.2.</span> <span class="toc-text">(2)就绪状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-运行状态"><span class="toc-number">1.2.3.</span> <span class="toc-text">(3)运行状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-阻塞状态"><span class="toc-number">1.2.4.</span> <span class="toc-text">(4)阻塞状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-死亡状态"><span class="toc-number">1.2.5.</span> <span class="toc-text">(5)死亡状态</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-线程间的通信"><span class="toc-number">1.3.</span> <span class="toc-text">3.线程间的通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-多线程的创建"><span class="toc-number">1.4.</span> <span class="toc-text">4.多线程的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-通过实现Runnable接口"><span class="toc-number">1.4.1.</span> <span class="toc-text">(1)通过实现Runnable接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-通过继承Thread来创建线程"><span class="toc-number">1.4.2.</span> <span class="toc-text">(2)通过继承Thread来创建线程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-死锁"><span class="toc-number">1.5.</span> <span class="toc-text">5.死锁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、进程"><span class="toc-number">2.</span> <span class="toc-text">二、进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-简介"><span class="toc-number">2.1.</span> <span class="toc-text">1.简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-进程的通信"><span class="toc-number">2.2.</span> <span class="toc-text">2.进程的通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-进程的互斥和同步"><span class="toc-number">2.3.</span> <span class="toc-text">3.进程的互斥和同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、线程与进程的区别与联系"><span class="toc-number">3.</span> <span class="toc-text">三、线程与进程的区别与联系</span></a></li></ol>
          </div>
    <script type="text/javascript">
   function showToc(){
@@ -236,149 +240,41 @@ var _hmt = _hmt || [];
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>安装mysql</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#安装 MySQL 服务端、核心程序</span></div><div class="line">sudo apt-<span class="builtin-name">get</span> install mysql-server</div><div class="line"></div><div class="line"><span class="comment">#安装 MySQL 客户端</span></div><div class="line">sudo apt-<span class="builtin-name">get</span> install mysql-client</div></pre></td></tr></table></figure>
-</li>
-<li><p>验证是否安装并启动成功</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo netstat -tap <span class="string">| grep mysql</span></div></pre></td></tr></table></figure>
-</li>
+        <h2 id="一、线程"><a href="#一、线程" class="headerlink" title="一、线程"></a>一、线程</h2><h3 id="1-线程与多线程"><a href="#1-线程与多线程" class="headerlink" title="1.线程与多线程"></a>1.线程与多线程</h3><ul>
+<li>线程是程序中一个单一的顺序控制流程，是程序执行流的最小单元；</li>
+<li>一个多线程程序包含两个或多个能并发运行的部分。程序的每一部分都称作一个线程，并且每个线程定义了一个独立的执行路径；</li>
+<li>线程调度是指按照特定机制为多个线程分配CPU的使用权；有两种调度模型：分时调度模型和抢占式调度模型。<h3 id="2-一个线程的生命周期"><a href="#2-一个线程的生命周期" class="headerlink" title="2.一个线程的生命周期"></a>2.一个线程的生命周期</h3><img src="/images/os-1.png" alt="线程"></li>
 </ul>
 <a id="more"></a>
-<ul>
-<li><p>打开MySQL服务并使用root用户登录：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#启动 MySQL 服务</span></div><div class="line">sudo<span class="built_in"> service </span>mysql start             </div><div class="line"></div><div class="line"><span class="comment">#使用 root 用户登录，实验楼环境的密码为空，直接回车就可以登录</span></div><div class="line">mysql -u root</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>连接数据库</p>
-<figure class="highlight openscad"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">use</span> &lt;数据库名&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>查看表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看表中的内容</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> &lt;表名字&gt;;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employee;</div></pre></td></tr></table></figure>
-</li>
-<li><p>退出<br>使用命令 quit 或者 exit 退出 MySQL。</p>
-</li>
-<li><p>创建一个数据库</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> &lt;数据库名字&gt;;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> mysql_shiyan;</div></pre></td></tr></table></figure>
-</li>
-<li><p>新建数据表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表的名字</div><div class="line">(</div><div class="line">列名a 数据类型(数据长度),</div><div class="line">列名b 数据类型(数据长度)，</div><div class="line">列名c 数据类型(数据长度)</div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> employee (<span class="keyword">id</span> <span class="built_in">int</span>(<span class="number">10</span>),<span class="keyword">name</span> <span class="built_in">char</span>(<span class="number">20</span>),phone <span class="built_in">int</span>(<span class="number">12</span>));</div></pre></td></tr></table></figure>
-</li>
-<li><p>插入数据</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表的名字(列名a,列名b,列名c) <span class="keyword">VALUES</span>(值<span class="number">1</span>,值<span class="number">2</span>,值<span class="number">3</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> employee(<span class="keyword">id</span>,<span class="keyword">name</span>,phone) <span class="keyword">VALUES</span>(<span class="number">01</span>,<span class="string">'Tom'</span>,<span class="number">110110110</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> employee <span class="keyword">VALUES</span>(<span class="number">02</span>,<span class="string">'Jack'</span>,<span class="number">119119119</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> employee(<span class="keyword">id</span>,<span class="keyword">name</span>) <span class="keyword">VALUES</span>(<span class="number">03</span>,<span class="string">'Rose'</span>);</div></pre></td></tr></table></figure>
-</li>
-<li><p>加载文件中的数据，搭建数据库</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">source</span> <span class="regexp">/home/</span>shiyanlou<span class="regexp">/Desktop/</span>SQL4<span class="regexp">/MySQL-04-01.sql</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>向数据库插入数据</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">source</span> <span class="regexp">/home/</span>shiyanlou<span class="regexp">/Desktop/</span>SQL4<span class="regexp">/MySQL-04-02.sql</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>SELECT 语句的基本格式为</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> 要查询的列名 <span class="keyword">FROM</span> 表名字 <span class="keyword">WHERE</span> 限制条件;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age <span class="keyword">FROM</span> employee;</div></pre></td></tr></table></figure>
-</li>
-<li><p>数学符号条件</p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">WHERE</span>限制条件可以有数学符号 (=,&lt;,&gt;,&gt;=,&lt;=) </div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age FROM employee <span class="keyword">WHERE</span> age&gt;<span class="number">25</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone FROM employee <span class="keyword">WHERE</span> <span class="keyword">name</span>=<span class="string">'Mary'</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>“AND”与“OR”</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#筛选出 age 小于 25，或 age 大于 30</div><div class="line"><span class="keyword">SELECT</span> name,age <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> age&lt;<span class="number">25</span> <span class="keyword">OR</span> age&gt;<span class="number">30</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>IN 和 NOT IN</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone,in_dpt <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> in_dpt <span class="keyword">IN</span> (<span class="string">'dpt3'</span>,<span class="string">'dpt4'</span>);</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone,in_dpt <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> in_dpt <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="string">'dpt1'</span>,<span class="string">'dpt3'</span>);</div></pre></td></tr></table></figure>
-</li>
-<li><p>通配符_ 和 %</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> phone <span class="keyword">LIKE</span> <span class="string">'1101__'</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">LIKE</span> <span class="string">'J%'</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>对结果排序ORDER BY,关键词ASC和DESC可指定升序或降序排序</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,salary,phone <span class="keyword">FROM</span> employee <span class="keyword">ORDER</span> <span class="keyword">BY</span> salary <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
+<h4 id="1-新建状态"><a href="#1-新建状态" class="headerlink" title="(1)新建状态"></a>(1)新建状态</h4><p>使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 start() 这个线程。</p>
+<h4 id="2-就绪状态"><a href="#2-就绪状态" class="headerlink" title="(2)就绪状态"></a>(2)就绪状态</h4><p>当线程对象调用了start()方法之后，该线程就进入就绪状态。就绪状态的线程处于就绪队列中，要等待JVM里线程调度器的调度。</p>
+<h4 id="3-运行状态"><a href="#3-运行状态" class="headerlink" title="(3)运行状态"></a>(3)运行状态</h4><p>如果就绪状态的线程获取 CPU 资源，就可以执行 run()，此时线程便处于运行状态。处于运行状态的线程最为复杂，它可以变为阻塞状态、就绪状态和死亡状态。</p>
+<h4 id="4-阻塞状态"><a href="#4-阻塞状态" class="headerlink" title="(4)阻塞状态"></a>(4)阻塞状态</h4><p>如果一个线程执行了sleep（睡眠）、suspend（挂起）等方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。</p>
+<h4 id="5-死亡状态"><a href="#5-死亡状态" class="headerlink" title="(5)死亡状态"></a>(5)死亡状态</h4><p>一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。</p>
+<h3 id="3-线程间的通信"><a href="#3-线程间的通信" class="headerlink" title="3.线程间的通信"></a>3.线程间的通信</h3><ul>
+<li>wait()方法使调用该方法的线程释放共享资源的锁，然后从运行状态中退出，进入等待队列，知道被再次唤醒。</li>
+<li>notify()方法可以唤醒等待队列中第一个等待同一共享资源的线程，并使该线程退出等待队列进入可运行状态。</li>
+<li>notifyAll()方法可以使所有正在等待队列中等待同一共享资源的线程从等待状态退出，进入可运行状态，此时，优先级最高的那个线程最先执行。<h3 id="4-多线程的创建"><a href="#4-多线程的创建" class="headerlink" title="4.多线程的创建"></a>4.多线程的创建</h3><h4 id="1-通过实现Runnable接口"><a href="#1-通过实现Runnable接口" class="headerlink" title="(1)通过实现Runnable接口"></a>(1)通过实现Runnable接口</h4>创建一个线程，最简单的方法是创建一个实现 Runnable 接口的类。<br>为了实现 Runnable，一个类只需要执行一个方法调用 run()，声明如下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">public void run()</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>函数名：</th>
-<th>COUNT</th>
-<th>SUM</th>
-<th>AVG</th>
-<th>MAX</th>
-<th>MIN</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>作用：</td>
-<td>计数</td>
-<td>求和</td>
-<td>求平均值</td>
-<td>最大值</td>
-<td>最小值</td>
-</tr>
-</tbody>
-</table>
+<p>你可以重写该方法，重要的是理解的 run() 可以调用其他方法，使用其他类，并声明变量，就像主线程一样。<br>在创建一个实现 Runnable 接口的类之后，你可以在类中实例化一个线程对象。<br>Thread 定义了几个构造方法，下面的这个是我们经常使用的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Thread(Runnable threadOb,String threadName);</div></pre></td></tr></table></figure></p>
+<p>这里，threadOb 是一个实现 Runnable 接口的类的实例，并且 threadName 指定新线程的名字。<br>新线程创建之后，你调用它的 start() 方法它才会运行。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">void start();</div></pre></td></tr></table></figure></p>
+<p>eg:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">class RunnableDemo implements Runnable &#123;</div><div class="line">   private Thread t;</div><div class="line">   private String threadName;</div><div class="line">   </div><div class="line">   RunnableDemo( String name) &#123;</div><div class="line">      threadName = name;</div><div class="line">      System.out.println(<span class="string">"Creating "</span> +  threadName );</div><div class="line">   &#125;</div><div class="line">   public void <span class="function"><span class="title">run</span></span>() &#123;</div><div class="line">      System.out.println(<span class="string">"Running "</span> +  threadName );</div><div class="line">      try &#123;</div><div class="line">         <span class="keyword">for</span>(int i = 4; i &gt; 0; i--) &#123;</div><div class="line">            System.out.println(<span class="string">"Thread: "</span> + threadName + <span class="string">", "</span> + i);</div><div class="line">            // 让线程睡眠一会</div><div class="line">            Thread.sleep(50);</div><div class="line">         &#125;</div><div class="line">      &#125;catch (InterruptedException e) &#123;</div><div class="line">         System.out.println(<span class="string">"Thread "</span> +  threadName + <span class="string">" interrupted."</span>);</div><div class="line">      &#125;</div><div class="line">      System.out.println(<span class="string">"Thread "</span> +  threadName + <span class="string">" exiting."</span>);</div><div class="line">   &#125;</div><div class="line">   public void <span class="function"><span class="title">start</span></span> () &#123;</div><div class="line">      System.out.println(<span class="string">"Starting "</span> +  threadName );</div><div class="line">      <span class="keyword">if</span> (t == null) &#123;</div><div class="line">         t = new Thread (this, threadName);</div><div class="line">         t.start ();</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line">public class TestThread &#123;</div><div class="line"> </div><div class="line">   public static void main(String args[]) &#123;</div><div class="line">      RunnableDemo R1 = new RunnableDemo( <span class="string">"Thread-1"</span>);</div><div class="line">      R1.start();</div><div class="line">      </div><div class="line">      RunnableDemo R2 = new RunnableDemo( <span class="string">"Thread-2"</span>);</div><div class="line">      R2.start();</div><div class="line">   &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="2-通过继承Thread来创建线程"><a href="#2-通过继承Thread来创建线程" class="headerlink" title="(2)通过继承Thread来创建线程"></a>(2)通过继承Thread来创建线程</h4><p>创建一个线程的第二种方法是创建一个新的类，该类继承Thread类，然后创建一个该类的实例。<br>继承类必须重写 run() 方法，该方法是新线程的入口点。它也必须调用 start() 方法才能执行。<br>该方法尽管被列为一种多线程实现方式，但是本质上也是实现了 Runnable 接口的一个实例。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">class ThreadDemo extends Thread &#123;</div><div class="line">   private Thread t;</div><div class="line">   private String threadName;</div><div class="line">   </div><div class="line">   ThreadDemo( String name) &#123;</div><div class="line">      threadName = name;</div><div class="line">      System.out.println(<span class="string">"Creating "</span> +  threadName );</div><div class="line">   &#125;</div><div class="line">   public void <span class="function"><span class="title">run</span></span>() &#123;</div><div class="line">      System.out.println(<span class="string">"Running "</span> +  threadName );</div><div class="line">      try &#123;</div><div class="line">         <span class="keyword">for</span>(int i = 4; i &gt; 0; i--) &#123;</div><div class="line">            System.out.println(<span class="string">"Thread: "</span> + threadName + <span class="string">", "</span> + i);</div><div class="line">            // 让线程睡醒一会</div><div class="line">            Thread.sleep(50);</div><div class="line">         &#125;</div><div class="line">      &#125;catch (InterruptedException e) &#123;</div><div class="line">         System.out.println(<span class="string">"Thread "</span> +  threadName + <span class="string">" interrupted."</span>);</div><div class="line">      &#125;</div><div class="line">      System.out.println(<span class="string">"Thread "</span> +  threadName + <span class="string">" exiting."</span>);</div><div class="line">   &#125; </div><div class="line">   public void <span class="function"><span class="title">start</span></span> () &#123;</div><div class="line">      System.out.println(<span class="string">"Starting "</span> +  threadName );</div><div class="line">      <span class="keyword">if</span> (t == null) &#123;</div><div class="line">         t = new Thread (this, threadName);</div><div class="line">         t.start ();</div><div class="line">      &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line">public class TestThread &#123;</div><div class="line"> </div><div class="line">   public static void main(String args[]) &#123;</div><div class="line">      ThreadDemo T1 = new ThreadDemo( <span class="string">"Thread-1"</span>);</div><div class="line">      T1.start();</div><div class="line">      </div><div class="line">      ThreadDemo T2 = new ThreadDemo( <span class="string">"Thread-2"</span>);</div><div class="line">      T2.start();</div><div class="line">   &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>下表列出了Thread类的一些重要方法<br>序号|方法描述| 备注<br>—- |—-| —–<br>1|public void start()|使该线程开始执行；Java虚拟机调用该线程的run方法。|<br>2|public void run()|独立的Runnable运行对象构造的，则调用该Runnable对象的run方法；否则，该方法不执行任何操作并返回。|<br>3|public final void setName(String name) |改变线程名称，使之与参数 name 相同。|<br>4|public final void setPriority(int priority)|更改线程的优先级。|<br>5|public final void setDaemon(boolean on)|将该线程标记为守护线程或用户线程。|<br>6|public final void join(long millisec)|等待该线程终止的时间最长为 millis 毫秒。|<br>7|public void interrupt()|中断线程。|<br>8|public final boolean isAlive()|测试线程是否处于活动状态。|<br>下面的方法是Thread类的静态方法<br>序号 |方法描述 | 备注<br>—- |—- |—–<br>1|public static void yield()|暂停当前正在执行的线程对象，并执行其他线程。|<br>2|public static void sleep(long millisec)|在指定的毫秒数内让当前正在执行的线程休眠（暂停执行）。|<br>3|public static boolean holdsLock(Object x)|当且仅当当前线程在指定的对象上保持监视器锁时，才返回 true。|<br>4|public static Thread currentThread()|返回对当前正在执行的线程对象的引用。|<br>5|public static void dumpStack()|将当前线程的堆栈跟踪打印至标准错误流。|</p>
+<h3 id="5-死锁"><a href="#5-死锁" class="headerlink" title="5.死锁"></a>5.死锁</h3><p>线程之间由于抢占资源容易形成死锁。死锁是由于两个或多个线程都无法得到相应的锁而造成的所有线程都处于等待锁的状态的现象。<br>死锁有如下4个必要条件：</p>
 <ul>
-<li><p>SQL 内置函数和计算</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(salary) <span class="keyword">AS</span> max_salary,<span class="built_in">MIN</span>(salary) <span class="keyword">FROM</span> employee;</div></pre></td></tr></table></figure>
-</li>
-<li><p>子查询</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> of_dpt,<span class="keyword">COUNT</span>(proj_name) <span class="keyword">AS</span> count_project <span class="keyword">FROM</span> <span class="keyword">project</span></div><div class="line"><span class="keyword">WHERE</span> of_dpt <span class="keyword">IN</span></div><div class="line">(<span class="keyword">SELECT</span> in_dpt <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> <span class="keyword">name</span>=<span class="string">'Tom'</span>);</div></pre></td></tr></table></figure>
-</li>
-<li><p>连接查询</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">id</span>,<span class="keyword">name</span>,people_num</div><div class="line"><span class="keyword">FROM</span> employee,department</div><div class="line"><span class="keyword">WHERE</span> employee.in_dpt = department.dpt_name</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">id</span>;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">id</span>,<span class="keyword">name</span>,people_num</div><div class="line"><span class="keyword">FROM</span> employee <span class="keyword">JOIN</span> department</div><div class="line"><span class="keyword">ON</span> employee.in_dpt = department.dpt_name</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">id</span>;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>删除数据库</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">DATABASE</span> test_01;</div></pre></td></tr></table></figure>
-</li>
-<li><p>重命名一张表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">RENAME</span> <span class="keyword">TABLE</span> 原名 <span class="keyword">TO</span> 新名字;</div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 原名 <span class="keyword">RENAME</span> 新名;</div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 原名 <span class="keyword">RENAME</span> <span class="keyword">TO</span> 新名;</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除一张表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> 表名字;</div></pre></td></tr></table></figure>
-</li>
-<li><p>在表中增加一列的语句</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> 列名字 数据类型 约束;</div><div class="line">或： <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">ADD</span> 列名字 数据类型 约束;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE employee <span class="builtin-name">ADD</span> weight INT(4)<span class="built_in"> DEFAULT </span>120 AFTER age; #新增一列 weight (体重)放置在 age (年龄)的后面</div><div class="line">ALTER TABLE employee <span class="builtin-name">ADD</span> test INT(10)<span class="built_in"> DEFAULT </span>11 FIRST;#放在第一列的位置，则使用 FIRST 关键词</div></pre></td></tr></table></figure>
-<ul>
-<li><p>删除一列</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> 列名字;</div><div class="line">或： <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">DROP</span> 列名字;</div></pre></td></tr></table></figure>
-</li>
-<li><p>重命名一列</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">CHANGE</span> 原列名 新列名 数据类型 约束;</div></pre></td></tr></table></figure>
-</li>
-<li><p>改变数据类型</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">MODIFY</span> 列名字 新数据类型;</div></pre></td></tr></table></figure>
-</li>
-<li><p>修改表中某个值</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UPDATE 表名字 SET 列<span class="number">1</span>=值<span class="number">1</span>,列<span class="number">2</span>=值<span class="number">2</span> WHERE 条件;</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除一行记录</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名字 <span class="keyword">WHERE</span> 条件;</div></pre></td></tr></table></figure>
-</li>
-<li><p>索引</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE 表名字 ADD <span class="keyword">INDEX</span> 索引名 (列名);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> 索引名 <span class="keyword">ON</span> 表名字 (列名);</div><div class="line">ALTER TABLE employee ADD <span class="keyword">INDEX</span> idx_id (id);  #在employee表的id列上建立名为idx_id的索引</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> idx_name <span class="keyword">ON</span> employee (name);   #在employee表的name列上建立名为idx_name的索引</div></pre></td></tr></table></figure>
-</li>
-<li><p>视图</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> 视图名(列a,列b,列c) <span class="keyword">AS</span> <span class="keyword">SELECT</span> 列<span class="number">1</span>,列<span class="number">2</span>,列<span class="number">3</span> <span class="keyword">FROM</span> 表名字;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> v_emp(v_name,v_age,v_phone) <span class="keyword">AS</span> <span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone <span class="keyword">FROM</span> employee;</div></pre></td></tr></table></figure>
-</li>
-<li><p>导入</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">LOAD</span> <span class="keyword">DATA</span> <span class="keyword">INFILE</span> <span class="string">'文件路径'</span> <span class="keyword">INTO</span> <span class="keyword">TABLE</span> 表名字;</div></pre></td></tr></table></figure>
-</li>
-<li><p>导出</p>
-<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> 列<span class="number">1</span>，列<span class="number">2</span> <span class="keyword">INTO</span> OUTFILE <span class="string">'文件路径和文件名'</span> <span class="keyword">FROM</span> 表名字;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">INTO</span> OUTFILE <span class="string">'/tmp/out.txt'</span> <span class="keyword">FROM</span> employee;#把整个employee表的数据导出到 /tmp 目录下，导出文件命名为 <span class="keyword">out</span>.txt</div></pre></td></tr></table></figure>
-</li>
-<li><p>备份</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mysqldump</span> -u root 数据库名&gt;备份文件名;   <span class="comment">#备份整个数据库</span></div><div class="line"><span class="attribute">mysqldump</span> -u root 数据库名 表名字&gt;备份文件名;  <span class="comment">#备份整个表</span></div><div class="line"><span class="attribute">mysqldump</span> -u root mysql_shiyan &gt; bak.sql;<span class="comment">#备份整个数据库 mysql_shiyan，将备份文件命名为 bak.sql</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>恢复</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">mysql</span> -u root test &lt; <span class="keyword">bak.sql; </span>#把刚才备份的 <span class="keyword">bak.sql </span>恢复到 test 数据库</div></pre></td></tr></table></figure></li>
+<li>互斥使用（资源独占）—— 一个资源每次只能给一个进程使用；</li>
+<li>不可强占（不可剥夺）—— 资源申请者不能强行从资源占有者手中夺取资源，资源只能由占有者资源释放；</li>
+<li>请求和保持（部分分配，占有申请）—— 一个进程在申请新的资源的同时保持对原有资源的占有（只有这样才是动态申请，动态分配）；</li>
+<li>循环等待 —— 如{p1,p2,p3,…,pn}的等待序列，p1等待p2占有的资源，以此类推，形成循环。<br>死锁的处理策略：</li>
+<li>忽略该问题；</li>
+<li>检测死锁并且恢复；</li>
+<li>仔细地对资源进行动态分配，以避免死锁；</li>
+<li>通过破除死锁4个必要条件之一，来防止死锁的产生。<h2 id="二、进程"><a href="#二、进程" class="headerlink" title="二、进程"></a>二、进程</h2><h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h3>进程是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位，是操作系统结构的基础。<h3 id="2-进程的通信"><a href="#2-进程的通信" class="headerlink" title="2.进程的通信"></a>2.进程的通信</h3></li>
+<li>Windows间用文件映射、内存共享、匿名管道、动态链接库、NetBios函数、Socket函数等来进行通信。<h3 id="3-进程的互斥和同步"><a href="#3-进程的互斥和同步" class="headerlink" title="3.进程的互斥和同步"></a>3.进程的互斥和同步</h3>进程同步也是进程之间直接的制约关系，是为完成某种任务而建立的两个或多个线程，这个线程需要在某些位置上协调他们的工作次序而等待、传递信息所产生的制约关系。进程间的直接制约关系来源于他们之间的合作。<br>比如说进程A需要从缓冲区读取进程B产生的信息，当缓冲区为空时，进程B因为读取不到信息而被阻塞。而当进程A产生信息放入缓冲区时，进程B才会被唤醒。<br><img src="/images/os-2.jpg" alt="线程"><br>进程互斥是进程之间的间接制约关系。当一个进程进入临界区使用临界资源时，另一个进程必须等待。只有当使用临界资源的进程退出临界区后，这个进程才会解除阻塞状态。<br>比如进程B需要访问打印机，但此时进程A占有了打印机，进程B会被阻塞，直到进程A释放了打印机资源,进程B才可以继续执行。<br><img src="/images/os-3.jpg" alt="线程"><h2 id="三、线程与进程的区别与联系"><a href="#三、线程与进程的区别与联系" class="headerlink" title="三、线程与进程的区别与联系"></a>三、线程与进程的区别与联系</h2></li>
+<li>联系：一个进程可以拥有多个线程，一个线程不能没有进程；</li>
+<li>区别：线程没有独立的存储空间，而是和所属进程中的其他线程共享一个存储空间。</li>
 </ul>
 
       
@@ -392,11 +288,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SQL语句</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OS</a>
         		</li>
       		
 		</ul>
@@ -452,7 +344,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://gentlebaymax.com/2017/08/07/SQL-2/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://gentlebaymax.com/2017/08/24/caozuo-1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -466,18 +358,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/08/24/caozuo-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          进程与线程
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/07/SQL-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SQL基础</div>
+    <a href="/2017/08/07/SQL-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL基本操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -504,7 +387,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、线程"><span class="toc-number">1.</span> <span class="toc-text">一、线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-线程与多线程"><span class="toc-number">1.1.</span> <span class="toc-text">1.线程与多线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-一个线程的生命周期"><span class="toc-number">1.2.</span> <span class="toc-text">2.一个线程的生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-新建状态"><span class="toc-number">1.2.1.</span> <span class="toc-text">(1)新建状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-就绪状态"><span class="toc-number">1.2.2.</span> <span class="toc-text">(2)就绪状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-运行状态"><span class="toc-number">1.2.3.</span> <span class="toc-text">(3)运行状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-阻塞状态"><span class="toc-number">1.2.4.</span> <span class="toc-text">(4)阻塞状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-死亡状态"><span class="toc-number">1.2.5.</span> <span class="toc-text">(5)死亡状态</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-线程间的通信"><span class="toc-number">1.3.</span> <span class="toc-text">3.线程间的通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-多线程的创建"><span class="toc-number">1.4.</span> <span class="toc-text">4.多线程的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-通过实现Runnable接口"><span class="toc-number">1.4.1.</span> <span class="toc-text">(1)通过实现Runnable接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-通过继承Thread来创建线程"><span class="toc-number">1.4.2.</span> <span class="toc-text">(2)通过继承Thread来创建线程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-死锁"><span class="toc-number">1.5.</span> <span class="toc-text">5.死锁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、进程"><span class="toc-number">2.</span> <span class="toc-text">二、进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-简介"><span class="toc-number">2.1.</span> <span class="toc-text">1.简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-进程的通信"><span class="toc-number">2.2.</span> <span class="toc-text">2.进程的通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-进程的互斥和同步"><span class="toc-number">2.3.</span> <span class="toc-text">3.进程的互斥和同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、线程与进程的区别与联系"><span class="toc-number">3.</span> <span class="toc-text">三、线程与进程的区别与联系</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -518,7 +401,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="SQL-2" data-title="MySQL基本操作" data-url="//gentlebaymax.com/2017/08/07/SQL-2/"></div>
+	<div class="ds-thread" data-thread-key="caozuo-1" data-title="进程与线程" data-url="//gentlebaymax.com/2017/08/24/caozuo-1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -541,8 +424,8 @@ var _hmt = _hmt || [];
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "//gentlebaymax.com/2017/08/07/SQL-2/", 
-    sourceId: "SQL-2",
+    url: "//gentlebaymax.com/2017/08/24/caozuo-1/", 
+    sourceId: "caozuo-1",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -551,7 +434,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="SQL-2" ></div> 
+  <div id="SOHUCS" sid="caozuo-1" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "true"; 

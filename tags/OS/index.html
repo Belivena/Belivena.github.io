@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//gentlebaymax.com">
-  <title>MySQL基本操作 | 何李杰的博客</title>
+  <title>Tag: OS | 何李杰的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql">
-<meta name="keywords" content="MySQL,SQL语句">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MySQL基本操作">
-<meta property="og:url" content="//gentlebaymax.com/2017/08/07/SQL-2/index.html">
+  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="website">
+<meta property="og:title" content="何李杰的博客">
+<meta property="og:url" content="//gentlebaymax.com/tags/OS/index.html">
 <meta property="og:site_name" content="何李杰的博客">
-<meta property="og:description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql">
-<meta property="og:updated_time" content="2017-08-24T02:20:53.301Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL基本操作">
-<meta name="twitter:description" content="安装mysql 12345#安装 MySQL 服务端、核心程序sudo apt-get install mysql-server#安装 MySQL 客户端sudo apt-get install mysql-client  验证是否安装并启动成功 1sudo netstat -tap | grep mysql">
+<meta name="twitter:title" content="何李杰的博客">
   
     <link rel="alternative" href="/atom.xml" title="何李杰的博客" type="application/atom+xml">
   
@@ -170,398 +166,60 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SQL-2" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      MySQL基本操作
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/08/24/caozuo-1/" class="archive-article-date">
+  	<time datetime="2017-08-24T02:57:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/08/24/caozuo-1/">进程与线程</a>
     </h1>
   
 
-  
-  <section id="comments">
-<!--高速版，加载速度快，使用前需测试页面的兼容性-->
-<div id="SOHUCS" sid="MySQL基本操作"></div>
-<script>
-  (function(){
-    var appid = 'cytbbsxXo',
-    conf = '15327a8a44831531fdd2f2b5b4f87b7f';
-    var doc = document,
-    s = doc.createElement('script'),
-    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
-    s.type = 'text/javascript';
-    s.charset = 'utf-8';
-    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
-    h.insertBefore(s,h.firstChild);
-    window.SCS_NO_IFRAME = true;
-  })()
-</script>    
-  </section>
-  
-        
-        <a href="/2017/08/07/SQL-2/" class="archive-article-date">
-  	<time datetime="2017-08-07T04:42:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
-</a>
-        
-      </header>
-<!-- 目录内容 -->
-
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-          <span class="btn-bg"></span>
-          <span class="btn-text">文章导航</span>
-          </p>
-  <div id="toc-article" class="toc-article">
-      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-    <strong class="toc-title">文章目录</strong>
-           
-         </div>
-   <script type="text/javascript">
-  function showToc(){
-    var toc_article = document.getElementById("toc-article");
-    var show_toc_btn = document.getElementById("show-toc-btn");
-    toc_article.setAttribute("style","display:block");
-    show_toc_btn.setAttribute("style","display:none");
-    };
-  function showBtn(){
-    var toc_article = document.getElementById("toc-article");
-    var show_toc_btn = document.getElementById("show-toc-btn");
-    toc_article.setAttribute("style","display:none");
-    show_toc_btn.setAttribute("style","display:block");
-    };
-   </script>
-         
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>安装mysql</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#安装 MySQL 服务端、核心程序</span></div><div class="line">sudo apt-<span class="builtin-name">get</span> install mysql-server</div><div class="line"></div><div class="line"><span class="comment">#安装 MySQL 客户端</span></div><div class="line">sudo apt-<span class="builtin-name">get</span> install mysql-client</div></pre></td></tr></table></figure>
-</li>
-<li><p>验证是否安装并启动成功</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo netstat -tap <span class="string">| grep mysql</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li><p>打开MySQL服务并使用root用户登录：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#启动 MySQL 服务</span></div><div class="line">sudo<span class="built_in"> service </span>mysql start             </div><div class="line"></div><div class="line"><span class="comment">#使用 root 用户登录，实验楼环境的密码为空，直接回车就可以登录</span></div><div class="line">mysql -u root</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>连接数据库</p>
-<figure class="highlight openscad"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">use</span> &lt;数据库名&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>查看表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>查看表中的内容</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> &lt;表名字&gt;;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employee;</div></pre></td></tr></table></figure>
-</li>
-<li><p>退出<br>使用命令 quit 或者 exit 退出 MySQL。</p>
-</li>
-<li><p>创建一个数据库</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> &lt;数据库名字&gt;;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> mysql_shiyan;</div></pre></td></tr></table></figure>
-</li>
-<li><p>新建数据表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表的名字</div><div class="line">(</div><div class="line">列名a 数据类型(数据长度),</div><div class="line">列名b 数据类型(数据长度)，</div><div class="line">列名c 数据类型(数据长度)</div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> employee (<span class="keyword">id</span> <span class="built_in">int</span>(<span class="number">10</span>),<span class="keyword">name</span> <span class="built_in">char</span>(<span class="number">20</span>),phone <span class="built_in">int</span>(<span class="number">12</span>));</div></pre></td></tr></table></figure>
-</li>
-<li><p>插入数据</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表的名字(列名a,列名b,列名c) <span class="keyword">VALUES</span>(值<span class="number">1</span>,值<span class="number">2</span>,值<span class="number">3</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> employee(<span class="keyword">id</span>,<span class="keyword">name</span>,phone) <span class="keyword">VALUES</span>(<span class="number">01</span>,<span class="string">'Tom'</span>,<span class="number">110110110</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> employee <span class="keyword">VALUES</span>(<span class="number">02</span>,<span class="string">'Jack'</span>,<span class="number">119119119</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> employee(<span class="keyword">id</span>,<span class="keyword">name</span>) <span class="keyword">VALUES</span>(<span class="number">03</span>,<span class="string">'Rose'</span>);</div></pre></td></tr></table></figure>
-</li>
-<li><p>加载文件中的数据，搭建数据库</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">source</span> <span class="regexp">/home/</span>shiyanlou<span class="regexp">/Desktop/</span>SQL4<span class="regexp">/MySQL-04-01.sql</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>向数据库插入数据</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">source</span> <span class="regexp">/home/</span>shiyanlou<span class="regexp">/Desktop/</span>SQL4<span class="regexp">/MySQL-04-02.sql</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>SELECT 语句的基本格式为</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> 要查询的列名 <span class="keyword">FROM</span> 表名字 <span class="keyword">WHERE</span> 限制条件;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age <span class="keyword">FROM</span> employee;</div></pre></td></tr></table></figure>
-</li>
-<li><p>数学符号条件</p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">WHERE</span>限制条件可以有数学符号 (=,&lt;,&gt;,&gt;=,&lt;=) </div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age FROM employee <span class="keyword">WHERE</span> age&gt;<span class="number">25</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone FROM employee <span class="keyword">WHERE</span> <span class="keyword">name</span>=<span class="string">'Mary'</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>“AND”与“OR”</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#筛选出 age 小于 25，或 age 大于 30</div><div class="line"><span class="keyword">SELECT</span> name,age <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> age&lt;<span class="number">25</span> <span class="keyword">OR</span> age&gt;<span class="number">30</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>IN 和 NOT IN</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone,in_dpt <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> in_dpt <span class="keyword">IN</span> (<span class="string">'dpt3'</span>,<span class="string">'dpt4'</span>);</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone,in_dpt <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> in_dpt <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="string">'dpt1'</span>,<span class="string">'dpt3'</span>);</div></pre></td></tr></table></figure>
-</li>
-<li><p>通配符_ 和 %</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> phone <span class="keyword">LIKE</span> <span class="string">'1101__'</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">LIKE</span> <span class="string">'J%'</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>对结果排序ORDER BY,关键词ASC和DESC可指定升序或降序排序</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,age,salary,phone <span class="keyword">FROM</span> employee <span class="keyword">ORDER</span> <span class="keyword">BY</span> salary <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>函数名：</th>
-<th>COUNT</th>
-<th>SUM</th>
-<th>AVG</th>
-<th>MAX</th>
-<th>MIN</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>作用：</td>
-<td>计数</td>
-<td>求和</td>
-<td>求平均值</td>
-<td>最大值</td>
-<td>最小值</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>SQL 内置函数和计算</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(salary) <span class="keyword">AS</span> max_salary,<span class="built_in">MIN</span>(salary) <span class="keyword">FROM</span> employee;</div></pre></td></tr></table></figure>
-</li>
-<li><p>子查询</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> of_dpt,<span class="keyword">COUNT</span>(proj_name) <span class="keyword">AS</span> count_project <span class="keyword">FROM</span> <span class="keyword">project</span></div><div class="line"><span class="keyword">WHERE</span> of_dpt <span class="keyword">IN</span></div><div class="line">(<span class="keyword">SELECT</span> in_dpt <span class="keyword">FROM</span> employee <span class="keyword">WHERE</span> <span class="keyword">name</span>=<span class="string">'Tom'</span>);</div></pre></td></tr></table></figure>
-</li>
-<li><p>连接查询</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">id</span>,<span class="keyword">name</span>,people_num</div><div class="line"><span class="keyword">FROM</span> employee,department</div><div class="line"><span class="keyword">WHERE</span> employee.in_dpt = department.dpt_name</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">id</span>;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">id</span>,<span class="keyword">name</span>,people_num</div><div class="line"><span class="keyword">FROM</span> employee <span class="keyword">JOIN</span> department</div><div class="line"><span class="keyword">ON</span> employee.in_dpt = department.dpt_name</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">id</span>;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>删除数据库</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">DATABASE</span> test_01;</div></pre></td></tr></table></figure>
-</li>
-<li><p>重命名一张表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">RENAME</span> <span class="keyword">TABLE</span> 原名 <span class="keyword">TO</span> 新名字;</div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 原名 <span class="keyword">RENAME</span> 新名;</div><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 原名 <span class="keyword">RENAME</span> <span class="keyword">TO</span> 新名;</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除一张表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> 表名字;</div></pre></td></tr></table></figure>
-</li>
-<li><p>在表中增加一列的语句</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> 列名字 数据类型 约束;</div><div class="line">或： <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">ADD</span> 列名字 数据类型 约束;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE employee <span class="builtin-name">ADD</span> weight INT(4)<span class="built_in"> DEFAULT </span>120 AFTER age; #新增一列 weight (体重)放置在 age (年龄)的后面</div><div class="line">ALTER TABLE employee <span class="builtin-name">ADD</span> test INT(10)<span class="built_in"> DEFAULT </span>11 FIRST;#放在第一列的位置，则使用 FIRST 关键词</div></pre></td></tr></table></figure>
-<ul>
-<li><p>删除一列</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> 列名字;</div><div class="line">或： <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">DROP</span> 列名字;</div></pre></td></tr></table></figure>
-</li>
-<li><p>重命名一列</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">CHANGE</span> 原列名 新列名 数据类型 约束;</div></pre></td></tr></table></figure>
-</li>
-<li><p>改变数据类型</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名字 <span class="keyword">MODIFY</span> 列名字 新数据类型;</div></pre></td></tr></table></figure>
-</li>
-<li><p>修改表中某个值</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UPDATE 表名字 SET 列<span class="number">1</span>=值<span class="number">1</span>,列<span class="number">2</span>=值<span class="number">2</span> WHERE 条件;</div></pre></td></tr></table></figure>
-</li>
-<li><p>删除一行记录</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名字 <span class="keyword">WHERE</span> 条件;</div></pre></td></tr></table></figure>
-</li>
-<li><p>索引</p>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE 表名字 ADD <span class="keyword">INDEX</span> 索引名 (列名);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> 索引名 <span class="keyword">ON</span> 表名字 (列名);</div><div class="line">ALTER TABLE employee ADD <span class="keyword">INDEX</span> idx_id (id);  #在employee表的id列上建立名为idx_id的索引</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> idx_name <span class="keyword">ON</span> employee (name);   #在employee表的name列上建立名为idx_name的索引</div></pre></td></tr></table></figure>
-</li>
-<li><p>视图</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> 视图名(列a,列b,列c) <span class="keyword">AS</span> <span class="keyword">SELECT</span> 列<span class="number">1</span>,列<span class="number">2</span>,列<span class="number">3</span> <span class="keyword">FROM</span> 表名字;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> v_emp(v_name,v_age,v_phone) <span class="keyword">AS</span> <span class="keyword">SELECT</span> <span class="keyword">name</span>,age,phone <span class="keyword">FROM</span> employee;</div></pre></td></tr></table></figure>
-</li>
-<li><p>导入</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">LOAD</span> <span class="keyword">DATA</span> <span class="keyword">INFILE</span> <span class="string">'文件路径'</span> <span class="keyword">INTO</span> <span class="keyword">TABLE</span> 表名字;</div></pre></td></tr></table></figure>
-</li>
-<li><p>导出</p>
-<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> 列<span class="number">1</span>，列<span class="number">2</span> <span class="keyword">INTO</span> OUTFILE <span class="string">'文件路径和文件名'</span> <span class="keyword">FROM</span> 表名字;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">INTO</span> OUTFILE <span class="string">'/tmp/out.txt'</span> <span class="keyword">FROM</span> employee;#把整个employee表的数据导出到 /tmp 目录下，导出文件命名为 <span class="keyword">out</span>.txt</div></pre></td></tr></table></figure>
-</li>
-<li><p>备份</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mysqldump</span> -u root 数据库名&gt;备份文件名;   <span class="comment">#备份整个数据库</span></div><div class="line"><span class="attribute">mysqldump</span> -u root 数据库名 表名字&gt;备份文件名;  <span class="comment">#备份整个表</span></div><div class="line"><span class="attribute">mysqldump</span> -u root mysql_shiyan &gt; bak.sql;<span class="comment">#备份整个数据库 mysql_shiyan，将备份文件命名为 bak.sql</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>恢复</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">mysql</span> -u root test &lt; <span class="keyword">bak.sql; </span>#把刚才备份的 <span class="keyword">bak.sql </span>恢复到 test 数据库</div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SQL语句</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OS</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://gentlebaymax.com/2017/08/07/SQL-2/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/08/24/caozuo-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          进程与线程
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/08/07/SQL-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SQL基础</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    目录，不存在的…
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="SQL-2" data-title="MySQL基本操作" data-url="//gentlebaymax.com/2017/08/07/SQL-2/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "//gentlebaymax.com/2017/08/07/SQL-2/", 
-    sourceId: "SQL-2",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-  <div id="SOHUCS" sid="SQL-2" ></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = "true"; 
-var conf = "true"; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-  
-
-  
+    
 
 
           </div>
@@ -593,9 +251,9 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
